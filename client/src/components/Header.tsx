@@ -4,11 +4,15 @@
  * Color: Warm ivory background with teal accent on active/hover
  */
 
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Header() {
   const [location] = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -20,11 +24,12 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href="/">
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div className="container">
+          <div className="flex h-20 items-center justify-between">
+            {/* Logo */}
+            <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer group">
               <img 
                 src="/images/CopelandLawLetterheadLogo-transparent.png" 
@@ -32,10 +37,10 @@ export default function Header() {
                 className="h-12 transition-opacity group-hover:opacity-80"
               />
             </div>
-          </Link>
+            </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
                 <span
@@ -49,18 +54,26 @@ export default function Header() {
                 </span>
               </Link>
             ))}
-          </nav>
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
+            {/* Mobile Menu Button */}
+            <Button
             variant="ghost"
             size="sm"
             className="md:hidden text-accent-font text-xs"
-          >
-            Menu
-          </Button>
+            onClick={() => setIsMobileMenuOpen(true)}
+            >
+              <Menu className="h-5 w-5 mr-2" />
+              Menu
+            </Button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      
+      <MobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+      />
+    </>
   );
 }

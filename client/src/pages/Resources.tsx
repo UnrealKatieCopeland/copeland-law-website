@@ -164,7 +164,7 @@ export default function Resources() {
 
                 <div className="mt-6">
                   <Link href="/contact">
-                    <Button size="lg" className="text-accent-font">
+                    <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
                       Request Consultation
                     </Button>
                   </Link>
@@ -269,7 +269,7 @@ export default function Resources() {
               </Card>
             </div>
             <Link href="/contact">
-              <Button size="lg" className="text-accent-font">
+              <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
                 Inquire About Case Mapping Services
               </Button>
             </Link>

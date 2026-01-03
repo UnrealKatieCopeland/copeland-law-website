@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SkipLink from "./components/SkipLink";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import PracticeAreas from "./pages/PracticeAreas";
@@ -40,8 +41,9 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <div className="flex flex-col min-h-screen">
+            <SkipLink />
             <Header />
-            <main className="flex-1">
+            <main id="main-content" className="flex-1">
               <Router />
             </main>
             <Footer />

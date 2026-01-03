@@ -1,61 +1,89 @@
-/* 
- * Editorial Minimalism Design: Resource library page
- * Layout: Organized categories with clear navigation
+/**
+ * Editorial Minimalism Design: Resources and tools page
+ * Layout: Organized resource library with protected IP
  */
 
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Download, BookOpen, Scale, Users, Heart, AlertCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileText, Download, BookOpen, Scale, CheckCircle, Lock } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Resources() {
   const resourceCategories = [
     {
-      icon: Heart,
-      title: "Family Law Resources",
-      description: "Forms, guides, and information for family law matters",
-      resources: [
-        { name: "Divorce Checklist", type: "PDF Guide" },
-        { name: "Child Custody Agreement Template", type: "Form" },
-        { name: "Parenting Plan Worksheet", type: "Form" },
-        { name: "Financial Disclosure Forms", type: "Form Package" },
-        { name: "Guide to Texas Family Law", type: "Educational Guide" },
-      ]
-    },
-    {
-      icon: Users,
-      title: "Disability Rights Resources",
-      description: "Information and tools for disability advocacy",
-      resources: [
-        { name: "ADA Rights Overview", type: "PDF Guide" },
-        { name: "Reasonable Accommodation Request Letter", type: "Template" },
-        { name: "Disability Discrimination Complaint Guide", type: "Guide" },
-        { name: "IEP Meeting Preparation Checklist", type: "Checklist" },
-        { name: "Social Security Disability Appeal Guide", type: "Guide" },
-      ]
-    },
-    {
+      title: "ADA Courtroom Rights",
       icon: Scale,
-      title: "ADA Compliance Resources",
-      description: "Tools for ensuring courtroom accessibility",
+      description: "Understanding your rights to accessibility in judicial proceedings",
       resources: [
-        { name: "ADA Title II Courtroom Compliance Checklist", type: "Checklist" },
-        { name: "Accommodation Request for Court Proceedings", type: "Template" },
-        { name: "Accessibility Barrier Documentation Form", type: "Form" },
-        { name: "Guide to ADA Title II Requirements", type: "Educational Guide" },
-        { name: "Sample Complaint Letters", type: "Template Package" },
-      ]
+        {
+          name: "ADA Title II Overview for Court Proceedings",
+          type: "Guide",
+          description: "Comprehensive introduction to federal accessibility requirements in courtrooms",
+          available: true,
+        },
+        {
+          name: "Common Courtroom Accessibility Barriers",
+          type: "Checklist",
+          description: "Identification guide for systemic barriers in judicial settings",
+          available: true,
+        },
+        {
+          name: "Requesting Reasonable Accommodations",
+          type: "Template",
+          description: "Professional letter template for formal accommodation requests",
+          available: true,
+        },
+      ],
     },
     {
+      title: "Documentation & Evidence",
       icon: FileText,
-      title: "General Legal Resources",
-      description: "Helpful information for various legal matters",
+      description: "Tools for tracking and documenting accessibility violations",
       resources: [
-        { name: "Legal Terminology Glossary", type: "Reference" },
-        { name: "How to Prepare for a Legal Consultation", type: "Guide" },
-        { name: "Document Organization Checklist", type: "Checklist" },
-        { name: "Understanding Legal Fees", type: "Guide" },
-        { name: "Pro Se Representation Guide", type: "Guide" },
-      ]
+        {
+          name: "ADA Violation Documentation Worksheet",
+          type: "Template",
+          description: "Structured template for recording accessibility barriers and denials",
+          available: true,
+        },
+        {
+          name: "Timeline Template for Accessibility Issues",
+          type: "Template",
+          description: "Chronological tracking tool for accommodation requests and responses",
+          available: true,
+        },
+        {
+          name: "Evidence Organization Framework",
+          type: "Guide",
+          description: "Strategic approach to organizing documentation for legal action",
+          available: true,
+        },
+      ],
+    },
+    {
+      title: "Legal Standards Reference",
+      icon: BookOpen,
+      description: "Plain-language explanations of federal accessibility regulations",
+      resources: [
+        {
+          name: "28 C.F.R. § 35.130 - General Prohibitions",
+          type: "Reference",
+          description: "Key federal regulation explained with practical applications",
+          available: true,
+        },
+        {
+          name: "Case Law Digest: Courtroom Accessibility",
+          type: "Reference",
+          description: "Summary of landmark cases establishing accessibility rights",
+          available: true,
+        },
+        {
+          name: "Texas-Specific Accessibility Requirements",
+          type: "Reference",
+          description: "State law provisions complementing federal ADA protections",
+          available: true,
+        },
+      ],
     },
   ];
 
@@ -65,22 +93,82 @@ export default function Resources() {
       <section className="py-24 bg-card">
         <div className="container-reading">
           <p className="text-accent-font text-primary mb-6">Legal Resources</p>
-          <h1 className="mb-8">Resource Library</h1>
-          <p className="text-xl text-foreground/70 leading-relaxed font-light mb-8">
-            Access a comprehensive collection of legal forms, guides, and educational 
-            materials designed to empower individuals navigating the legal system.
+          <h1 className="mb-8">Tools & Educational Materials</h1>
+          <p className="text-xl text-foreground/70 leading-relaxed font-light">
+            Access comprehensive resources designed to empower individuals navigating 
+            accessibility challenges in the legal system.
           </p>
-          
-          <Card className="border-primary/20 bg-primary/5">
-            <CardContent className="p-6 flex gap-4">
-              <AlertCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-display font-semibold mb-2">Important Notice</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed">
-                  These resources are provided for informational purposes only and do not 
-                  constitute legal advice. Every legal situation is unique, and you should 
-                  consult with a qualified attorney about your specific circumstances.
+        </div>
+      </section>
+
+      {/* Featured Framework - The Copeland Questions */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <Card className="border-primary/40 bg-gradient-to-br from-primary/5 to-primary/10">
+            <CardContent className="p-12">
+              <div className="max-w-3xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <Scale className="h-10 w-10 text-primary" />
+                  <div>
+                    <h2 className="text-3xl mb-2">The Copeland Questions™</h2>
+                    <p className="text-sm text-foreground/60">© 2026 Kathryn Copeland. All Rights Reserved.</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+                  A strategic framework for identifying and addressing systemic accessibility 
+                  barriers in judicial proceedings. Inspired by landmark civil rights advocacy, 
+                  The Copeland Questions provide a structured approach to ensuring equal access 
+                  to justice.
                 </p>
+
+                <div className="bg-background/50 rounded-sm p-6 mb-6">
+                  <h3 className="text-accent-font text-sm mb-4 text-foreground">
+                    Framework Components
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground/70">
+                        <strong>Threshold Questions</strong> - Establishing jurisdiction and applicable standards
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground/70">
+                        <strong>Interactive Process Analysis</strong> - Evaluating good faith engagement
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground/70">
+                        <strong>Pattern Recognition</strong> - Identifying systemic versus isolated barriers
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground/70">
+                        <strong>Remedy Framework</strong> - Structuring effective relief requests
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 bg-background/70 rounded-sm border border-primary/20">
+                  <Lock className="h-5 w-5 text-primary flex-shrink-0" />
+                  <p className="text-sm text-foreground/70">
+                    <strong>Full framework available through consultation.</strong> Contact Katie 
+                    to discuss how The Copeland Questions can be applied to your case or organization.
+                  </p>
+                </div>
+
+                <div className="mt-6">
+                  <Link href="/contact">
+                    <Button size="lg" className="text-accent-font">
+                      Request Consultation
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -88,124 +176,114 @@ export default function Resources() {
       </section>
 
       {/* Resource Categories */}
-      <section className="py-16 bg-background">
-        <div className="container">
-          <div className="space-y-16">
-            {resourceCategories.map((category) => {
-              const Icon = category.icon;
-              return (
-                <div key={category.title}>
-                  <div className="flex items-center gap-3 mb-6">
-                    <Icon className="h-7 w-7 text-primary" />
-                    <h2 className="text-3xl">{category.title}</h2>
-                  </div>
-                  <p className="text-foreground/70 mb-8 max-w-2xl">
-                    {category.description}
-                  </p>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {category.resources.map((resource) => (
-                      <Card key={resource.name} className="border-border/40 hover:border-primary/40 transition-all group">
-                        <CardContent className="p-6">
-                          <div className="flex items-start justify-between mb-3">
-                            <FileText className="h-6 w-6 text-primary" />
-                            <span className="text-xs text-accent-font text-muted-foreground">
-                              {resource.type}
-                            </span>
-                          </div>
-                          <h3 className="font-display font-semibold text-lg mb-4">
-                            {resource.name}
-                          </h3>
-                          <Button 
-                            variant="outline" 
-                            size="sm" 
-                            className="w-full text-accent-font group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                          >
-                            <Download className="h-4 w-4 mr-2" />
-                            Download
-                          </Button>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
+      {resourceCategories.map((category, index) => {
+        const Icon = category.icon;
+        return (
+          <section 
+            key={category.title}
+            className={`py-16 ${index % 2 === 0 ? 'bg-card' : 'bg-background'}`}
+          >
+            <div className="container">
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className="h-8 w-8 text-primary" />
+                  <h2 className="text-3xl">{category.title}</h2>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+                <p className="text-foreground/70 text-lg">
+                  {category.description}
+                </p>
+              </div>
 
-      {/* Educational Content Section */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.resources.map((resource) => (
+                  <Card key={resource.name} className="border-border/40 hover:border-primary/40 transition-all">
+                    <CardHeader>
+                      <div className="flex items-start justify-between gap-3 mb-2">
+                        <FileText className="h-6 w-6 text-primary flex-shrink-0" />
+                        <span className="text-xs text-primary bg-primary/10 px-2 py-1 rounded-sm">
+                          {resource.type}
+                        </span>
+                      </div>
+                      <CardTitle className="text-lg leading-tight">
+                        {resource.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-foreground/70 leading-relaxed mb-4">
+                        {resource.description}
+                      </p>
+                      {resource.available ? (
+                        <Button variant="outline" size="sm" className="w-full text-accent-font group">
+                          <Download className="h-4 w-4 mr-2 group-hover:translate-y-0.5 transition-transform" />
+                          Request Access
+                        </Button>
+                      ) : (
+                        <Button variant="outline" size="sm" className="w-full text-accent-font" disabled>
+                          <Lock className="h-4 w-4 mr-2" />
+                          Coming Soon
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* Visual Case Mapping Service */}
       <section className="py-16 bg-card">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="h-7 w-7 text-primary" />
-              <h2 className="text-3xl">Educational Articles</h2>
-            </div>
-            <p className="text-foreground/70 mb-8">
-              In-depth articles and guides on important legal topics, written to be 
-              accessible and informative.
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="mb-6">Visual Case Mapping & Litigation Support</h2>
+            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
+              Transform complex legal narratives into clear, compelling visual timelines and 
+              case maps. Ideal for attorneys handling cases involving housing, disability, 
+              insurance, or systemic harm.
             </p>
-
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Understanding ADA Title II: Your Rights in the Courtroom",
-                  excerpt: "A comprehensive guide to accessibility rights in judicial proceedings and how to enforce them.",
-                  readTime: "12 min read"
-                },
-                {
-                  title: "Navigating Family Law: What to Expect in Custody Proceedings",
-                  excerpt: "Essential information about child custody cases, from initial filing through final orders.",
-                  readTime: "15 min read"
-                },
-                {
-                  title: "Disability Discrimination: Recognizing and Addressing Violations",
-                  excerpt: "How to identify disability discrimination and take action to protect your rights.",
-                  readTime: "10 min read"
-                },
-                {
-                  title: "The Copeland Questions: A Framework for Systemic Legal Reform",
-                  excerpt: "Introducing a strategic approach to identifying and addressing institutional failures in the legal system.",
-                  readTime: "18 min read"
-                },
-              ].map((article) => (
-                <Card key={article.title} className="border-border/40 hover:border-primary/40 transition-all cursor-pointer group">
-                  <CardContent className="p-8">
-                    <div className="flex items-start justify-between gap-4 mb-3">
-                      <h3 className="font-display font-semibold text-xl group-hover:text-primary transition-colors">
-                        {article.title}
-                      </h3>
-                      <span className="text-xs text-accent-font text-muted-foreground whitespace-nowrap">
-                        {article.readTime}
-                      </span>
-                    </div>
-                    <p className="text-foreground/70 leading-relaxed">
-                      {article.excerpt}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid md:grid-cols-3 gap-6 mb-8 text-left">
+              <Card className="border-border/40">
+                <CardContent className="p-6">
+                  <h3 className="text-accent-font text-sm mb-2 text-foreground">Timeline Development</h3>
+                  <p className="text-sm text-foreground/70">
+                    Visual chronologies that clarify causation and reveal patterns
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-border/40">
+                <CardContent className="p-6">
+                  <h3 className="text-accent-font text-sm mb-2 text-foreground">Party Mapping</h3>
+                  <p className="text-sm text-foreground/70">
+                    Flowcharts showing relationships and coordination between actors
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-border/40">
+                <CardContent className="p-6">
+                  <h3 className="text-accent-font text-sm mb-2 text-foreground">Harm Analysis</h3>
+                  <p className="text-sm text-foreground/70">
+                    Visual documentation of damages and their connections to conduct
+                  </p>
+                </CardContent>
+              </Card>
             </div>
+            <Link href="/contact">
+              <Button size="lg" className="text-accent-font">
+                Inquire About Case Mapping Services
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-background">
-        <div className="container-reading text-center">
-          <h2 className="mb-6">Need Personalized Guidance?</h2>
-          <p className="text-lg text-foreground/70 leading-relaxed mb-8 max-w-2xl mx-auto">
-            While these resources provide valuable information, every legal situation is 
-            unique. Contact Katie to discuss your specific needs.
+      {/* Copyright Notice */}
+      <section className="py-8 bg-background border-t border-border/40">
+        <div className="container">
+          <p className="text-sm text-center text-foreground/60">
+            All materials, frameworks, and templates are © 2026 Kathryn Copeland. All Rights Reserved. 
+            Unauthorized reproduction or distribution is prohibited.
           </p>
-          <a 
-            href="mailto:Katie@CopelandLawTexas.com"
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 text-accent-font"
-          >
-            Contact Katie
-          </a>
         </div>
       </section>
     </div>

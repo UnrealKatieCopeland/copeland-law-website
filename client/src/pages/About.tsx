@@ -29,16 +29,15 @@ export default function About() {
             
             <p className="text-foreground/80 leading-relaxed">
               Katie Copeland's legal career is marked by resilience, dedication, and an 
-              unwavering commitment to justice. With her license recently reinstated, she 
-              brings renewed energy to her practice, focusing on areas where legal expertise 
-              intersects with human compassion.
+              unwavering commitment to justice. She brings deep expertise to her practice, 
+              focusing on areas where legal knowledge intersects with human compassion.
             </p>
 
             <p className="text-foreground/80 leading-relaxed">
               Her practice encompasses family law, disability advocacy, personal injury, and 
               torts, but it's her specialized work in ADA Title II compliance that sets her 
-              apart. Katie has made it her mission to force courtrooms to comply with 
-              accessibility requirements, ensuring that justice is truly accessible to all.
+              apart. Katie has made it her mission to advocate for courtroom accessibility, 
+              ensuring that justice is truly accessible to all.
             </p>
 
             <div className="pull-quote my-12 text-foreground/90">
@@ -69,7 +68,7 @@ export default function About() {
                     <h3 className="text-xl font-display font-semibold">ADA Compliance</h3>
                   </div>
                   <p className="text-sm text-foreground/70 leading-relaxed">
-                    Specialized work forcing courtroom compliance with ADA Title II 
+                    Specialized work advocating for courtroom compliance with ADA Title II 
                     requirements, ensuring equal access to justice.
                   </p>
                 </CardContent>

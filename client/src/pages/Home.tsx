@@ -58,13 +58,12 @@ export default function Home() {
           <h2 className="mb-8">A Voice for Justice and Accessibility</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-foreground/80 leading-relaxed mb-6">
-              With a reinstated license and renewed purpose, Katie Copeland brings years of 
-              legal experience to the forefront of disability advocacy and family law. Her 
-              practice focuses on ensuring equal access to justice, particularly in areas 
-              where the legal system intersects with disability rights.
+              Katie Copeland brings years of legal experience to the forefront of disability 
+              advocacy and family law. Her practice focuses on ensuring equal access to justice, 
+              particularly in areas where the legal system intersects with disability rights.
             </p>
             <p className="text-foreground/80 leading-relaxed mb-6">
-              Katie's specialized work in forcing ADA Title II compliance in courtrooms 
+              Katie's specialized work in ADA Title II compliance and courtroom accessibility 
               represents a critical frontier in civil rights advocacy. She combines deep 
               legal knowledge with lived experience to challenge systemic barriers and 
               advocate for meaningful change.
@@ -95,7 +94,7 @@ export default function Home() {
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="/images/advocacy-hands.png" 
-                  alt="Family Law" 
+                  alt="Two hands clasped together in support, representing compassionate family law advocacy" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -116,7 +115,7 @@ export default function Home() {
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="/images/accessibility-focus.png" 
-                  alt="Disability Advocacy" 
+                  alt="Wheelchair accessibility symbol representing disability rights and equal access advocacy" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -137,7 +136,7 @@ export default function Home() {
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="/images/legal-research.png" 
-                  alt="ADA Compliance" 
+                  alt="Legal books and research materials representing ADA Title II compliance work" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -147,7 +146,7 @@ export default function Home() {
                   <h3 className="text-2xl">ADA Title II Compliance</h3>
                 </div>
                 <p className="text-foreground/70 leading-relaxed">
-                  Specialized work forcing courtroom compliance with ADA Title II, ensuring 
+                  Specialized work advocating for courtroom compliance with ADA Title II, ensuring 
                   accessible justice for all individuals regardless of disability.
                 </p>
               </CardContent>
@@ -158,7 +157,7 @@ export default function Home() {
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="/images/scales-abstract.png" 
-                  alt="Personal Injury" 
+                  alt="Abstract representation of scales of justice symbolizing personal injury law" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -180,7 +179,7 @@ export default function Home() {
                 <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" 
-                    alt="Resources" 
+                    alt="Organized legal documents and forms representing comprehensive legal resources" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -246,7 +245,9 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary" />
+                  <svg className="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                   <a 
                     href="tel:8177898498" 
                     className="text-foreground hover:text-primary transition-colors"
@@ -264,7 +265,7 @@ export default function Home() {
             <div className="relative h-[500px] rounded-sm overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80" 
-                alt="Contact" 
+                alt="Lady Justice statue symbolizing fairness and equal access to justice" 
                 className="w-full h-full object-cover"
               />
             </div>

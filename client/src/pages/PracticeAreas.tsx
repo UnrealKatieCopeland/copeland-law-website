@@ -51,7 +51,7 @@ export default function PracticeAreas() {
         "Policy and procedure reform",
         "Training and education for court personnel",
       ],
-      approach: "This is Katie's specialized niche—forcing courtrooms to comply with ADA Title II requirements. She has developed expertise in identifying accessibility barriers in judicial proceedings and compelling courts to provide necessary accommodations. This work is critical to ensuring equal access to justice for all individuals, regardless of disability."
+      approach: "This is Katie's specialized niche—advocating for courtroom compliance with ADA Title II requirements. She has developed expertise in identifying accessibility barriers in judicial proceedings and working to ensure courts provide necessary accommodations. This work is critical to ensuring equal access to justice for all individuals, regardless of disability."
     },
     {
       icon: FileText,

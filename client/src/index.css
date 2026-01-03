@@ -49,8 +49,8 @@
 
 /* Editorial Minimalism Color Palette: Warm ivory, charcoal, teal accents */
 :root {
-  --primary: oklch(0.55 0.12 195); /* Sophisticated teal */
-  --primary-foreground: oklch(0.99 0.01 195);
+  --primary: oklch(0.40 0.12 195); /* Darker teal for better contrast */
+  --primary-foreground: oklch(1 0 0); /* Pure white for maximum contrast */
   --sidebar-primary: oklch(0.55 0.12 195);
   --sidebar-primary-foreground: oklch(0.99 0.01 195);
   --chart-1: oklch(0.7 0.08 195);
@@ -68,7 +68,7 @@
   --secondary: oklch(0.95 0.005 60); /* Light warm gray */
   --secondary-foreground: oklch(0.3 0.01 60);
   --muted: oklch(0.92 0.005 60);
-  --muted-foreground: oklch(0.5 0.01 60); /* Medium gray for metadata */
+  --muted-foreground: oklch(0.45 0.01 60); /* Darker gray for better readability */
   --accent: oklch(0.55 0.12 195); /* Teal accent */
   --accent-foreground: oklch(0.99 0.01 195);
   --destructive: oklch(0.55 0.22 25);
@@ -92,7 +92,8 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     font-weight: 400;
-    line-height: 1.7;
+    font-size: 18px; /* Increased base font size for brain injury accessibility */
+    line-height: 1.8; /* Increased line height for better readability */
     letter-spacing: 0.01em;
   }
   
@@ -122,7 +123,7 @@
     font-family: var(--font-accent);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-size: 0.875rem;
+    font-size: 1rem; /* Increased from 0.875rem for better readability */
     font-weight: 500;
   }
   

@@ -42,7 +42,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/resources">
-                <Button size="lg" variant="outline" className="text-accent-font" style={{color: '#ffffff'}}>
+                <Button size="lg" variant="outline" className="text-accent-font" style={{color: '#ffffff', backgroundColor: 'oklab(0.4 -0.115911 -0.0310583 / 0.9)'}}>
                   Explore Resources
                 </Button>
               </Link>

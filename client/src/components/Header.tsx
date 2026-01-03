@@ -27,7 +27,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer group">
               <img 
-                src="/images/CopelandLawLetterheadLogo.png" 
+                src="/images/CopelandLawLetterheadLogo-transparent.png" 
                 alt="Copeland Law" 
                 className="h-12 transition-opacity group-hover:opacity-80"
               />

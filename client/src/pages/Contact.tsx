@@ -154,7 +154,7 @@ export default function Contact() {
                       </CardContent>
                     </Card>
 
-                    <Button type="submit" size="lg" className="w-full text-accent-font" style={{color: '#ffffff', color: '#ffffff'}}>
+                    <Button type="submit" size="lg" className="w-full text-accent-font" style={{color: '#ffffff'}}>
                       Send Message
                     </Button>
                   </form>

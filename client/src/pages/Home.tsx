@@ -37,12 +37,12 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/about">
-                <Button size="lg" className="text-accent-font" style={{color: '#fafafa'}}>
+                <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
                   Learn More
                 </Button>
               </Link>
               <Link href="/resources">
-                <Button size="lg" variant="outline" className="text-accent-font" style={{color: '#ffffff', backgroundColor: 'oklab(0.4 -0.115911 -0.0310583 / 0.9)'}}>
+                <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
                   Explore Resources
                 </Button>
               </Link>
@@ -194,7 +194,7 @@ export default function Home() {
                     the legal system.
                   </p>
                   <Link href="/resources">
-                    <Button variant="outline" className="text-accent-font w-fit" style={{color: '#ffffff'}}>
+                    <Button className="text-accent-font w-fit" style={{color: '#ffffff'}}>
                       Browse Resources
                     </Button>
                   </Link>

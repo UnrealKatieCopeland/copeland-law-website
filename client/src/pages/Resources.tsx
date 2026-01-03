@@ -213,12 +213,12 @@ export default function Resources() {
                         {resource.description}
                       </p>
                       {resource.available ? (
-                        <Button variant="outline" size="sm" className="w-full text-accent-font group">
+                        <Button size="sm" className="w-full text-accent-font group" style={{color: '#ffffff'}}>
                           <Download className="h-4 w-4 mr-2 group-hover:translate-y-0.5 transition-transform" />
                           Request Access
                         </Button>
                       ) : (
-                        <Button variant="outline" size="sm" className="w-full text-accent-font" disabled>
+                        <Button size="sm" className="w-full text-accent-font" style={{color: '#ffffff'}} disabled>
                           <Lock className="h-4 w-4 mr-2" />
                           Coming Soon
                         </Button>

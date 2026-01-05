@@ -157,17 +157,9 @@ export default function Resources() {
                 <div className="flex items-center gap-4 p-4 bg-background/70 rounded-sm border border-primary/20">
                   <Lock className="h-5 w-5 text-primary flex-shrink-0" />
                   <p className="text-sm text-foreground/70">
-                    <strong>Full framework available through consultation.</strong> Contact Katie 
-                    to discuss how The Copeland Questions can be applied to your case or organization.
+                    <strong>Protected intellectual property.</strong> The Copeland Questions™ 
+                    framework represents original research and advocacy work in disability rights.
                   </p>
-                </div>
-
-                <div className="mt-6">
-                  <Link href="/contact">
-                    <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
-                      Request Consultation
-                    </Button>
-                  </Link>
                 </div>
               </div>
             </CardContent>
@@ -212,17 +204,19 @@ export default function Resources() {
                       <p className="text-sm text-foreground/70 leading-relaxed mb-4">
                         {resource.description}
                       </p>
-                      {resource.available ? (
-                        <Button size="sm" className="w-full text-accent-font group" style={{color: '#ffffff'}}>
-                          <Download className="h-4 w-4 mr-2 group-hover:translate-y-0.5 transition-transform" />
-                          Request Access
-                        </Button>
-                      ) : (
-                        <Button size="sm" className="w-full text-accent-font" style={{color: '#ffffff'}} disabled>
-                          <Lock className="h-4 w-4 mr-2" />
-                          Coming Soon
-                        </Button>
-                      )}
+                      <div className="flex items-center gap-2 text-sm text-primary">
+                        {resource.available ? (
+                          <>
+                            <FileText className="h-4 w-4" />
+                            <span>Research Material</span>
+                          </>
+                        ) : (
+                          <>
+                            <Lock className="h-4 w-4" />
+                            <span>In Development</span>
+                          </>
+                        )}
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
@@ -231,51 +225,6 @@ export default function Resources() {
           </section>
         );
       })}
-
-      {/* Visual Case Mapping Service */}
-      <section className="py-16 bg-card">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="mb-6">Visual Case Mapping & Litigation Support</h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-              Transform complex legal narratives into clear, compelling visual timelines and 
-              case maps. Ideal for attorneys handling cases involving housing, disability, 
-              insurance, or systemic harm.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-8 text-left">
-              <Card className="border-border/40">
-                <CardContent className="p-6">
-                  <h3 className="text-accent-font text-sm mb-2 text-foreground">Timeline Development</h3>
-                  <p className="text-sm text-foreground/70">
-                    Visual chronologies that clarify causation and reveal patterns
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-border/40">
-                <CardContent className="p-6">
-                  <h3 className="text-accent-font text-sm mb-2 text-foreground">Party Mapping</h3>
-                  <p className="text-sm text-foreground/70">
-                    Flowcharts showing relationships and coordination between actors
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-border/40">
-                <CardContent className="p-6">
-                  <h3 className="text-accent-font text-sm mb-2 text-foreground">Harm Analysis</h3>
-                  <p className="text-sm text-foreground/70">
-                    Visual documentation of damages and their connections to conduct
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <Link href="/contact">
-              <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
-                Inquire About Case Mapping Services
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Copyright Notice */}
       <section className="py-8 bg-background border-t border-border/40">

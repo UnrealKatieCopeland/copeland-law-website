@@ -117,25 +117,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Education & Credentials */}
-      <section className="py-16 bg-card">
-        <div className="container-reading">
-          <h2 className="mb-8">Education & Credentials</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl mb-2">Licensed Attorney</h3>
-              <p className="text-foreground/70">State Bar of Texas</p>
-            </div>
-            <div>
-              <h3 className="text-xl mb-2">Areas of Focus</h3>
-              <p className="text-foreground/70">
-                Family Law, Disability Rights, ADA Title II Compliance, Personal Injury, Torts
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission */}
       <section className="py-16 bg-background">
         <div className="container-reading">

@@ -14,7 +14,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Practice Areas", path: "/practice-areas" },
     { label: "Resources", path: "/resources" },
     { label: "Articles", path: "/articles" },
     { label: "Contact", path: "/contact" },
@@ -51,16 +50,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {navItems.map((item) => (
                 <li key={item.path}>
                   <Link href={item.path}>
-                    <a
+                    <span
                       onClick={onClose}
-                      className={`block px-4 py-3 rounded-sm text-accent-font transition-colors ${
+                      className={`block px-4 py-3 rounded-sm text-accent-font transition-colors cursor-pointer ${
                         location === item.path
                           ? "bg-primary/10 text-primary"
                           : "text-foreground/70 hover:bg-accent hover:text-foreground"
                       }`}
                     >
                       {item.label}
-                    </a>
+                    </span>
                   </Link>
                 </li>
               ))}

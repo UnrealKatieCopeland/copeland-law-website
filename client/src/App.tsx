@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import SkipLink from "./components/SkipLink";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import PracticeAreas from "./pages/PracticeAreas";
+
 import Resources from "./pages/Resources";
 import Articles from "./pages/Articles";
 import Contact from "./pages/Contact";
@@ -19,7 +19,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/about"} component={About} />
-      <Route path={"/practice-areas"} component={PracticeAreas} />
+
       <Route path={"/resources"} component={Resources} />
       <Route path={"/articles"} component={Articles} />
       <Route path={"/contact"} component={Contact} />

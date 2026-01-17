@@ -1,525 +1,457 @@
 /**
- * Editorial Minimalism Design: Featured Framework page
- * Layout: Long-form essay with skimmable sections, pull quotes, and citation-ready formatting
+ * Editorial Minimalism Design: Framework Landing Page
+ * Introduces the framework, explains purpose and audience, links to full documents
  */
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Scale, FileText, BookOpen, Download } from "lucide-react";
+import { Scale, FileText, BookOpen, Download, Users, Target, AlertCircle, ExternalLink, GitBranch } from "lucide-react";
+import { Link } from "wouter";
+import { toast } from "sonner";
 
 export default function Framework() {
+  const handleShare = (platform: string) => {
+    const url = window.location.href;
+    const text = "The Copeland Questions™: A framework for analyzing courtroom accessibility without credibility contests or diagnostic gatekeeping.";
+    
+    if (platform === "twitter") {
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank");
+    } else if (platform === "linkedin") {
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank");
+    } else if (platform === "copy") {
+      navigator.clipboard.writeText(url);
+      toast.success("Link copied to clipboard!");
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 bg-card">
         <div className="container-reading">
-          <p className="text-accent-font text-primary mb-6">Featured Framework</p>
+          <div className="flex items-center gap-3 mb-6">
+            <Scale className="h-8 w-8 text-primary" />
+            <p className="text-accent-font text-primary">Featured Framework</p>
+          </div>
+          
           <h1 className="mb-8">
             Not Either/Or, But Both/And
           </h1>
+          
           <p className="text-2xl text-foreground/70 leading-relaxed font-light mb-8">
             Dialectics, Disability, and Meaningful Access in Court
           </p>
-          <p className="text-lg text-foreground/60 leading-relaxed mb-8">
-            A framework for analyzing courtroom accessibility without credibility contests, 
-            diagnostic gatekeeping, or inquiries into judicial intent.
+
+          <p className="text-lg text-foreground/60 leading-relaxed mb-12">
+            A belief-neutral, effect-based framework for analyzing courtroom accessibility without 
+            credibility contests, diagnostic gatekeeping, or inquiries into judicial intent.
           </p>
           
-          {/* Download and View Options */}
-          <div className="flex flex-wrap gap-4 items-center">
-            <a href="/Not-EitherOr-But-BothAnd.pdf" download aria-label="Download Not Either/Or, But Both/And PDF">
+          {/* Primary Actions */}
+          <div className="flex flex-wrap gap-4 mb-8">
+            <a href="https://not-either-or-but-both-a-au2bjb1.gamma.site" target="_blank" rel="noopener noreferrer">
               <Button size="lg" style={{color: '#ffffff'}}>
+                <BookOpen className="mr-2 h-5 w-5" />
+                View Full Framework
+              </Button>
+            </a>
+            <a href="/Not-EitherOr-But-BothAnd.pdf" download>
+              <Button size="lg" variant="outline" style={{color: '#ffffff'}}>
                 <Download className="mr-2 h-5 w-5" />
                 Download PDF
               </Button>
             </a>
-            <p className="text-sm text-foreground/60">
-              © 2026 Kathryn Copeland. All Rights Reserved.
-            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Interactive Presentation */}
-      <section className="py-16 bg-background">
-        <div className="container text-center">
-          <h2 className="mb-6">Interactive Presentation</h2>
-          <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-            View the full framework in an interactive, visually rich presentation format.
+          {/* Copyright */}
+          <p className="text-sm text-foreground/60">
+            © 2026 Kathryn Copeland. All Rights Reserved. The Copeland Questions™ is a trademark of Kathryn Copeland.
           </p>
-          <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer" aria-label="View interactive presentation on Gamma">
-            <Button size="lg" variant="outline" style={{color: '#ffffff'}}>
-              <BookOpen className="mr-2 h-5 w-5" />
-              View Interactive Version
-            </Button>
-          </a>
         </div>
       </section>
 
-      {/* Orientation */}
+      {/* What Is This Framework? */}
       <section className="py-16 bg-background">
         <div className="container-reading">
-          <div className="prose prose-lg max-w-none">
+          <h2 className="mb-8">What Is This Framework?</h2>
+          <div className="prose prose-lg max-w-none mb-12">
             <p className="text-lg text-foreground/70 leading-relaxed mb-6">
               Courts are routinely asked to assess disability-related accommodation issues in real time, 
-              often under procedural pressure and with incomplete records.
+              often under procedural pressure and with incomplete records. These disputes frequently 
+              collapse into credibility assessments, intent-based inquiries, or assumptions about 
+              impairment that the law does not require—and often forbids.
             </p>
             <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              These disputes frequently collapse into credibility assessments, intent-based inquiries, 
-              or assumptions about impairment that the law does not require—and often forbids.
+              <strong className="text-foreground">The Copeland Questions™</strong> offers a different 
+              approach: a structured, belief-neutral framework grounded in existing disability law, 
+              dialectical reasoning, and familiar courtroom practices. It provides judges, clerks, and 
+              attorneys with a clear pathway to analyze accessibility issues without requiring medical 
+              expertise or engaging in credibility contests about disability status.
             </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              This essay proposes a different approach: a belief-neutral, effect-based framework grounded 
-              in existing disability law, dialectical reasoning, and familiar courtroom practices.
-            </p>
+          </div>
+
+          {/* Key Features */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <Target className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">Effect-Based Analysis</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">
+                  Shifts focus from "Do I believe you're disabled?" to "Does the standard procedure 
+                  risk denying meaningful access?"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <Scale className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">Legally Grounded</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">
+                  Built on Title II of the ADA, Section 504, and established case law including 
+                  Gordon v. Massachusetts DCF (2015).
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <Users className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">Practical Application</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">
+                  Provides concrete questions judges can ask in the moment, without requiring medical 
+                  training or diagnostic expertise.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Main Essay Content */}
+      {/* Who Is This For? */}
       <section className="py-16 bg-card">
         <div className="container-reading">
-          <h2 className="mb-8">The False Either/Or in Disability Analysis</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Courts are built on decision-making. Judges must assess credibility, weigh evidence, and 
-              choose between competing accounts of reality. To do that efficiently, the legal system 
-              relies—often unconsciously—on binary thinking: credible or not, capable or not, persuasive or not.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Most of the time, that works.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              But disability breaks the binary.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              A litigant can be credible, intelligent, and legally correct <em>and</em> functionally 
-              impaired in how disability affects communication, sequencing, stamina, or performance under 
-              standard courtroom procedures. Those truths can coexist. Treating them as mutually exclusive 
-              is not neutrality—it is a reasoning error.
-            </p>
-            
-            <div className="my-12 p-8 bg-primary/5 border-l-4 border-primary">
-              <p className="text-xl text-foreground italic leading-relaxed">
-                Dialectical thinking names the correction: this is not either/or; it is both/and.
-              </p>
-            </div>
+          <h2 className="mb-8">Who Is This For?</h2>
+          
+          <div className="space-y-6">
+            <Card className="border-primary/30">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <Scale className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">Judges and Judicial Officers</h3>
+                    <p className="text-base text-foreground/70 leading-relaxed">
+                      Use this framework to analyze accommodation requests in real time, maintain 
+                      procedural efficiency, and ensure compliance with federal disability law—without 
+                      requiring medical expertise or engaging in credibility assessments about disability 
+                      status.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/30">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <FileText className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">Court Clerks and Administrators</h3>
+                    <p className="text-base text-foreground/70 leading-relaxed">
+                      Apply these principles when processing accommodation requests, designing court 
+                      procedures, and advising judicial officers on accessibility compliance. The 
+                      framework provides clear guidance for administrative decision-making.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/30">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <Users className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">Attorneys and Advocates</h3>
+                    <p className="text-base text-foreground/70 leading-relaxed">
+                      Frame accommodation requests using effect-based analysis, anticipate judicial 
+                      concerns, and advocate for clients without requiring them to "prove" disability 
+                      severity. The framework provides a shared language for discussing accessibility.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/30">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <BookOpen className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">Legal Educators and Researchers</h3>
+                    <p className="text-base text-foreground/70 leading-relaxed">
+                      Integrate this framework into judicial education programs, CLE courses, and 
+                      academic research on disability law and court access. The dialectical approach 
+                      offers a fresh lens for analyzing longstanding access issues.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
+      {/* The Copeland Questions */}
       <section className="py-16 bg-background">
-        <div className="container-reading">
-          <h2 className="mb-8">Dialectics and Legal Error</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Dialectical thinking is often misunderstood as compromise or muddling the middle. It is neither. 
-              Dialectics does not dilute truth; it holds two true propositions at once without forcing one 
-              to cancel the other.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              In a courtroom context, the non-dialectical mistake usually looks like this:
-            </p>
-            <ul className="list-disc pl-8 mb-6 text-lg text-foreground/70 leading-relaxed space-y-2">
-              <li>Presentation is treated as a proxy for credibility</li>
-              <li>Delivery is treated as a proxy for merit</li>
-              <li>Functional limitation is treated as a proxy for dishonesty, exaggeration, or lack of seriousness</li>
-            </ul>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              When disability affects how information is delivered—rather than whether it is true—standard 
-              procedures can distort the record. The problem is not the litigant. It is the mismatch between 
-              how courts expect people to perform and how disability actually operates.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-card">
-        <div className="container-reading">
-          <h2 className="mb-8">Why "Belief" Is the Wrong Frame</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Disability access disputes often collapse into an unhelpful question:
-            </p>
-            <p className="text-xl text-foreground/60 italic leading-relaxed mb-6 pl-8">
-              Do I believe this person is really impaired?
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              That question feels intuitive, but it is legally misplaced. Disability civil rights law does 
-              not require courts to resolve subjective belief disputes about diagnosis as a prerequisite to 
-              access. The proper inquiry is procedural and effect-focused:
-            </p>
-            
-            <div className="my-12 p-8 bg-primary/5 border-l-4 border-primary">
-              <p className="text-xl text-foreground italic leading-relaxed">
-                Regardless of belief or intent, do standard courtroom procedures risk denying meaningful 
-                access or distorting participation because of disability?
-              </p>
-            </div>
-
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              This shift matters. It moves the analysis away from credibility contests about impairment and 
-              back to where the law puts it: the reliability and fairness of the process itself.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-background">
-        <div className="container-reading">
-          <h2 className="mb-8">Disability Discrimination Is Often Not Animus—It Is "Benign Neglect"</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              The Supreme Court has long recognized that disability discrimination looks different from other 
-              forms of discrimination. It is often not the product of hostility or ill will, but of 
-              thoughtlessness, indifference, and neutral rules applied without regard to functional reality.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              In other words, harm can occur even when no one intends harm.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              That insight is crucial for courts. It explains why focusing on motive or belief is frequently 
-              the wrong diagnostic tool. The real barrier is often structural:
-            </p>
-            <ul className="list-disc pl-8 mb-6 text-lg text-foreground/70 leading-relaxed space-y-2">
-              <li>Rigid pacing</li>
-              <li>Fixed sequencing expectations</li>
-              <li>Stamina demands that exceed human capacity</li>
-              <li>Communication formats that assume a single neurocognitive style</li>
-              <li>Procedures that silently equate fluency with truth</li>
-            </ul>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              When these defaults interact with disability, exclusion can occur by design—even if the design 
-              was unintentional.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-card">
-        <div className="container-reading">
-          <h2 className="mb-8">Effect, Not Intent: The Doctrinal Bridge</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Many lawyers remember from constitutional law that Equal Protection claims generally require 
-              proof of discriminatory purpose, not merely disproportionate effects. That framework, however, 
-              does not control disability access analysis.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Disability civil rights statutes focus on meaningful access and reasonable modification. The 
-              question is not whether a decisionmaker intended to discriminate, but whether the effect of a 
-              procedure denies access or distorts participation.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              This distinction matters in courtrooms. Judicial neutrality is preserved not by ignoring 
-              disability's effects, but by ensuring that procedures do not misinterpret substance because of 
-              how disability affects performance.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-background">
-        <div className="container-reading">
-          <h2 className="mb-8">CART Shows the Rule—Not the Exception</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Courts already know how to do belief-neutral, effect-based access analysis. They just don't 
-              always recognize it.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Communication Access Realtime Translation (CART) is the clearest example.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              CART is routinely provided in courtrooms to ensure effective communication. It is granted 
-              without questioning a participant's credibility, intelligence, or the merits of their position. 
-              It does not alter testimony standards, evidentiary burdens, or outcomes. It modifies process to 
-              preserve accuracy.
-            </p>
-            
-            <div className="my-12 p-8 bg-primary/5 border-l-4 border-primary">
-              <p className="text-xl text-foreground italic leading-relaxed">
-                CART works because courts implicitly understand something essential: when standard procedures 
-                risk misunderstanding, the process must adjust—not the truth.
-              </p>
-            </div>
-
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              That same logic applies far beyond hearing loss. Pacing, sequencing, breaks, format, assistive 
-              communication tools, and remote participation are all procedural variables that can determine 
-              whether the record reflects reality or distortion.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-card">
-        <div className="container-reading">
-          <h2 className="mb-8">Courts Are ADA-Covered Systems</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Court proceedings are not exempt from disability law. Access to the courts is a core 
-              governmental function, and ensuring meaningful participation is a civil rights obligation—not 
-              a courtesy.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              Reasonable modifications are not about sympathy or special treatment. They are about accuracy, 
-              reliability, and fairness in adjudication.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-background">
-        <div className="container-reading">
-          <h2 className="mb-8">Remedies Clarify the Standard</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Another often-missed point: the legal standard can vary by remedy.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Access-focused relief—such as procedural modification or injunctive orders—does not depend on 
-              proof of discriminatory intent. Compensatory damages may require a showing such as deliberate 
-              indifference, depending on jurisdiction. But the existence of a violation does not hinge on 
-              belief or animus.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              That distinction further underscores why belief-based reasoning is a dead end.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* The Copeland Questions - Key Section */}
-      <section className="py-20 bg-primary/5">
         <div className="container-reading">
           <h2 className="mb-8">The Copeland Questions™</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-              To replace belief-based analysis with disciplined, legally correct reasoning, courts can ask a 
-              simple, neutral question:
-            </p>
-            
-            <Card className="border-primary/40 bg-card mb-8">
-              <CardContent className="p-10">
-                <p className="text-2xl text-foreground leading-relaxed font-light">
-                  Regardless of intent or belief, does this procedure risk denying meaningful access or 
-                  distorting participation because of disability?
-                </p>
-              </CardContent>
-            </Card>
-
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              If the answer is yes, the response is not to lower standards—but to adjust process so the 
-              merits can be evaluated without distortion.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              This approach protects:
-            </p>
-            <ul className="list-disc pl-8 mb-6 text-lg text-foreground/70 leading-relaxed space-y-2">
-              <li>The integrity of the record</li>
-              <li>The fairness of proceedings</li>
-              <li>Appellate review</li>
-              <li>And public confidence in the justice system</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-card">
-        <div className="container-reading">
-          <h2 className="mb-8">What This Is—and What It Is Not</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              This framework is not about excusing merit, inflating credibility, or granting special 
-              treatment. It does not ask courts to believe more.
-            </p>
-            
-            <div className="my-12 p-8 bg-primary/5 border-l-4 border-primary">
-              <p className="text-xl text-foreground italic leading-relaxed">
-                It asks courts to mistake less.
-              </p>
-            </div>
-
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Dialectical thinking—both/and, not either/or—allows courts to see disability clearly, analyze 
-              access correctly, and decide cases on their merits rather than on performance artifacts created 
-              by inaccessible procedures.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              That is not just good disability law. It is good judging.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Where This Framework Applies */}
-      <section className="py-16 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Where This Framework Applies</h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              This framework has applications across multiple domains of legal practice and scholarship
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="border-border/40">
-              <CardContent className="p-6 text-center">
-                <Scale className="h-10 w-10 text-primary mx-auto mb-4" />
-                <h3 className="text-lg mb-2">Judicial Education</h3>
-                <p className="text-foreground/70 text-base leading-relaxed">
-                  Bench materials and continuing legal education programs
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/40">
-              <CardContent className="p-6 text-center">
-                <FileText className="h-10 w-10 text-primary mx-auto mb-4" />
-                <h3 className="text-lg mb-2">Appellate Review</h3>
-                <p className="text-foreground/70 text-base leading-relaxed">
-                  Analysis of accommodation errors and procedural fairness
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/40">
-              <CardContent className="p-6 text-center">
-                <BookOpen className="h-10 w-10 text-primary mx-auto mb-4" />
-                <h3 className="text-lg mb-2">ADA Compliance</h3>
-                <p className="text-foreground/70 text-base leading-relaxed">
-                  Title II court system compliance and implementation
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/40">
-              <CardContent className="p-6 text-center">
-                <BookOpen className="h-10 w-10 text-primary mx-auto mb-4" />
-                <h3 className="text-lg mb-2">Legal Scholarship</h3>
-                <p className="text-foreground/70 text-base leading-relaxed">
-                  Academic research and teaching materials
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Share This Framework */}
-      <section className="py-16 bg-background">
-        <div className="container-reading text-center">
-          <h2 className="mb-6">Share This Framework</h2>
-          <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-            Help spread awareness of belief-neutral disability access analysis in courtrooms.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => {
-                const url = window.location.href;
-                const title = "Not Either/Or, But Both/And - The Copeland Questions™";
-                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
-              }}
-              aria-label="Share on Twitter"
-              style={{ color: '#ffffff' }}
-            >
-              Share on Twitter
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => {
-                const url = window.location.href;
-                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
-              }}
-              aria-label="Share on LinkedIn"
-              style={{ color: '#ffffff' }}
-            >
-              Share on LinkedIn
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => {
-                navigator.clipboard.writeText(window.location.href);
-              }}
-              aria-label="Copy link"
-              style={{ color: '#ffffff' }}
-            >
-              Copy Link
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Cite This Work Section */}
-      <section className="py-16 bg-card">
-        <div className="container-reading">
-          <h2 className="mb-8">Cite This Work</h2>
           
-          <Card className="border-border/40">
-            <CardContent className="p-8">
-              <p className="text-sm text-muted-foreground mb-6">
-                Use the following citation formats to reference this framework in your work:
-              </p>
+          <p className="text-lg text-foreground/70 leading-relaxed mb-8">
+            At the heart of this framework are three simple questions that shift the analysis from 
+            belief-based to effect-based:
+          </p>
 
-              <div className="space-y-6">
-                {/* APA Format */}
-                <div>
-                  <p className="text-sm font-semibold text-primary mb-2">APA (7th Edition)</p>
-                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
-                    Copeland, K. (2026). <em>Not either/or, but both/and: Dialectics, disability, and meaningful access in court</em>. Copeland Law. https://copelandlawtexas.com/framework
-                  </div>
-                </div>
+          <div className="space-y-6 mb-12">
+            <Card className="border-l-4 border-primary">
+              <CardContent className="p-8">
+                <p className="text-2xl font-display font-bold text-primary mb-3">1.</p>
+                <p className="text-xl font-medium mb-4">
+                  Does the standard procedure risk denying meaningful access?
+                </p>
+                <p className="text-sm text-foreground/60 leading-relaxed">
+                  This question focuses on procedural effects, not individual credibility. It asks 
+                  whether the current process creates barriers that could prevent participation, 
+                  regardless of whether the judge believes the person is "really" disabled.
+                </p>
+              </CardContent>
+            </Card>
 
-                {/* Bluebook Format */}
-                <div>
-                  <p className="text-sm font-semibold text-primary mb-2">Bluebook (21st Edition)</p>
-                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
-                    Kathryn Copeland, <em>Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court</em>, Copeland Law (2026), https://copelandlawtexas.com/framework.
-                  </div>
-                </div>
+            <Card className="border-l-4 border-primary">
+              <CardContent className="p-8">
+                <p className="text-2xl font-display font-bold text-primary mb-3">2.</p>
+                <p className="text-xl font-medium mb-4">
+                  What modification would address the effect without fundamentally altering the proceeding?
+                </p>
+                <p className="text-sm text-foreground/60 leading-relaxed">
+                  This question identifies reasonable solutions. It acknowledges that courts can adapt 
+                  procedures (pacing, format, breaks, assistive technology) without compromising 
+                  judicial authority or procedural integrity.
+                </p>
+              </CardContent>
+            </Card>
 
-                {/* MLA Format */}
-                <div>
-                  <p className="text-sm font-semibold text-primary mb-2">MLA (9th Edition)</p>
-                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
-                    Copeland, Kathryn. "Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court." <em>Copeland Law</em>, 2026, copelandlawtexas.com/framework.
-                  </div>
-                </div>
+            <Card className="border-l-4 border-primary">
+              <CardContent className="p-8">
+                <p className="text-2xl font-display font-bold text-primary mb-3">3.</p>
+                <p className="text-xl font-medium mb-4">
+                  Is there a documented, individualized reason this specific modification would impose 
+                  undue burden or fundamentally alter the proceeding?
+                </p>
+                <p className="text-sm text-foreground/60 leading-relaxed">
+                  This question applies the legal standard for denial. It requires courts to articulate 
+                  specific, case-based reasons for denying accommodation—not rely on generalized concerns 
+                  about efficiency or fairness.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
 
-                {/* Chicago Format */}
-                <div>
-                  <p className="text-sm font-semibold text-primary mb-2">Chicago (17th Edition)</p>
-                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
-                    Copeland, Kathryn. "Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court." Copeland Law, 2026. https://copelandlawtexas.com/framework.
-                  </div>
-                </div>
+          <div className="p-8 bg-primary/10 rounded-sm">
+            <div className="flex items-start gap-4">
+              <AlertCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-bold mb-3">Why These Questions Work</h3>
+                <p className="text-base text-foreground/70 leading-relaxed">
+                  These questions bypass the credibility trap entirely. They don't ask judges to evaluate 
+                  medical records, assess disability severity, or determine whether someone "really needs" 
+                  accommodation. Instead, they focus on procedural effects and legal standards—areas where 
+                  judges already have expertise.
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="mt-8 pt-6 border-t border-border/40">
-                <p className="text-sm text-muted-foreground">
-                  © 2026 Kathryn Copeland. All Rights Reserved.
+      {/* Supporting Resources */}
+      <section className="py-16 bg-card">
+        <div className="container-reading">
+          <h2 className="mb-8">Supporting Resources</h2>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card>
+              <CardContent className="p-6">
+                <BookOpen className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">Full Essay</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mb-4">
+                  Read the complete framework with legal analysis, case law citations, and dialectical 
+                  reasoning.
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  The Copeland Questions™ is a trademark of Kathryn Copeland.
+                <a href="https://not-either-or-but-both-a-au2bjb1.gamma.site" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" style={{color: '#ffffff'}}>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Full Essay
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <FileText className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">Quick Reference Deck</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mb-4">
+                  Visual slide deck with concise cards, practical examples, and specific modifications.
                 </p>
+                <a href="https://not-eitheror-but-bothand-7lj5vn6.gamma.site" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" style={{color: '#ffffff'}}>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Quick Reference
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <GitBranch className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">Interactive Decision Tree</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mb-4">
+                  Step-by-step guidance for analyzing accommodation requests with legal outcomes and next steps.
+                </p>
+                <Link href="/decision-tree">
+                  <Button variant="outline" style={{color: '#ffffff'}}>
+                    Use Decision Tree
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Test Your Understanding */}
+          <Card className="border-primary/30">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-xl font-bold mb-3">Test Your Understanding</h3>
+                  <p className="text-base text-foreground/70 leading-relaxed">
+                    Take our interactive quiz with real courtroom scenarios and case law explanations. 
+                    See how The Copeland Questions™ apply in practice.
+                  </p>
+                </div>
+                <Link href="/quiz">
+                  <Button size="lg" style={{color: '#ffffff'}}>
+                    Take the Quiz
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Footer Note */}
-      <section className="py-12 bg-background">
+      {/* Examples of Harm */}
+      <section className="py-16 bg-background">
+        <div className="container-reading">
+          <Card className="border-destructive/30 bg-destructive/5">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <AlertCircle className="h-6 w-6 text-destructive" />
+                    <h3 className="text-xl font-bold">Why This Framework Matters</h3>
+                  </div>
+                  <p className="text-base text-foreground/70 leading-relaxed">
+                    See documented cases showing what happens when courts fail to apply disability 
+                    rights law—including the heartbreaking Gordon v. Massachusetts DCF case where a 
+                    mother lost her baby based solely on disability diagnosis.
+                  </p>
+                </div>
+                <Link href="/examples-of-harm">
+                  <Button size="lg" variant="outline" style={{color: '#ffffff'}}>
+                    View Examples of Harm
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Citation Section */}
+      <section className="py-16 bg-card">
+        <div className="container-reading">
+          <h2 className="mb-8">How to Cite This Framework</h2>
+          
+          <div className="space-y-6">
+            <Card>
+              <CardContent className="p-6">
+                <p className="text-sm font-semibold text-primary mb-2">APA (7th Edition)</p>
+                <p className="text-sm font-mono bg-background p-4 rounded-sm">
+                  Copeland, K. (2026). <em>Not either/or, but both/and: Dialectics, disability, and meaningful access in court</em>. 
+                  https://copelandlawtexas.com/framework
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <p className="text-sm font-semibold text-primary mb-2">Bluebook (21st Edition)</p>
+                <p className="text-sm font-mono bg-background p-4 rounded-sm">
+                  Kathryn Copeland, <em>Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court</em>, 
+                  https://copelandlawtexas.com/framework (2026).
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <p className="text-sm font-semibold text-primary mb-2">MLA (9th Edition)</p>
+                <p className="text-sm font-mono bg-background p-4 rounded-sm">
+                  Copeland, Kathryn. "Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court." 
+                  <em>Copeland Law</em>, 2026, copelandlawtexas.com/framework.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <p className="text-sm font-semibold text-primary mb-2">Chicago (17th Edition)</p>
+                <p className="text-sm font-mono bg-background p-4 rounded-sm">
+                  Copeland, Kathryn. "Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court." 
+                  Copeland Law. 2026. https://copelandlawtexas.com/framework.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 p-6 bg-background rounded-sm">
+            <p className="text-sm text-foreground/60">
+              © 2026 Kathryn Copeland. All Rights Reserved. The Copeland Questions™ is a trademark of Kathryn Copeland.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Sharing */}
+      <section className="py-16 bg-background">
         <div className="container-reading text-center">
-          <p className="text-base text-foreground/60 mb-4">
-            This framework is part of ongoing work on courtroom accessibility, disability law, and 
-            procedural justice.
+          <h2 className="mb-6">Share This Framework</h2>
+          <p className="text-lg text-foreground/70 mb-8">
+            Help spread awareness of disability rights in courtrooms
           </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button onClick={() => handleShare("twitter")} variant="outline" style={{color: '#ffffff'}}>
+              Share on Twitter
+            </Button>
+            <Button onClick={() => handleShare("linkedin")} variant="outline" style={{color: '#ffffff'}}>
+              Share on LinkedIn
+            </Button>
+            <Button onClick={() => handleShare("copy")} variant="outline" style={{color: '#ffffff'}}>
+              Copy Link
+            </Button>
+          </div>
         </div>
       </section>
     </div>

@@ -5,7 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink } from "lucide-react";
+import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Resources() {
@@ -189,8 +189,99 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Featured Framework - The Copeland Questions */}
+      {/* Judicial Education Materials */}
       <section className="py-16 bg-background">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="mb-4">Judicial Education Materials</h2>
+            <p className="text-lg text-foreground/70">
+              Presentation-ready resources for judges, clerks, and court administrators
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <BookOpen className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Full Essay Presentation</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Comprehensive theoretical foundation
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  In-depth exploration of dialectical reasoning, the false either/or binary, 
+                  and the legal framework for belief-neutral access analysis.
+                </p>
+                <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full" style={{color: '#ffffff'}}>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Full Essay
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <FileText className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Quick Reference Deck</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Practical application guide
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  Visual slide deck with The Copeland Questions™, concrete examples of 
+                  reasonable modifications, and actionable guidance for practitioners.
+                </p>
+                <a href="https://not-eitheror-but-bothand-7lj5vn6.gamma.site" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full" style={{color: '#ffffff'}}>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Quick Reference
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-destructive/30">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <AlertTriangle className="h-6 w-6 text-destructive flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Examples of Harm</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Real consequences of failing to train
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  Documented cases showing what happens when courts fail to apply disability 
+                  rights law, including the heartbreaking Gordon v. Massachusetts DCF case.
+                </p>
+                <Link href="/examples-of-harm">
+                  <Button className="w-full" style={{color: '#ffffff'}}>
+                    View Case Examples
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Framework - The Copeland Questions */}
+      <section className="py-16 bg-card">
         <div className="container">
           <Card className="border-primary/40 bg-gradient-to-br from-primary/5 to-primary/10">
             <CardContent className="p-12">

@@ -13,6 +13,10 @@ import About from "./pages/About";
 import Resources from "./pages/Resources";
 import Articles from "./pages/Articles";
 import ArticleNotEitherOr from "./pages/ArticleNotEitherOr";
+import ArticleFightingBack from "./pages/ArticleFightingBack";
+import Quiz from "./pages/Quiz";
+import DecisionTree from "./pages/DecisionTree";
+import ExamplesOfHarm from "./pages/ExamplesOfHarm";
 import Contact from "./pages/Contact";
 
 function Router() {
@@ -24,6 +28,10 @@ function Router() {
       <Route path={"/resources"} component={Resources} />
       <Route path={"/articles"} component={Articles} />
       <Route path={"/article/not-eitheror-but-bothand"} component={ArticleNotEitherOr} />
+      <Route path={"/article/fighting-back-administrative-pathways"} component={ArticleFightingBack} />
+      <Route path={"/quiz"} component={Quiz} />
+      <Route path={"/decision-tree"} component={DecisionTree} />
+      <Route path={"/examples-of-harm"} component={ExamplesOfHarm} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

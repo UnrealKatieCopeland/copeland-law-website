@@ -244,7 +244,13 @@ export default function ArticleNotEitherOr() {
                   <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer">
                     <Button style={{ color: '#ffffff' }}>
                       <BookOpen className="mr-2 h-4 w-4" />
-                      View Interactive Guide
+                      View Full Essay
+                    </Button>
+                  </a>
+                  <a href="https://not-eitheror-but-bothand-7lj5vn6.gamma.site" target="_blank" rel="noopener noreferrer">
+                    <Button style={{ color: '#ffffff' }}>
+                      <FileText className="mr-2 h-4 w-4" />
+                      Quick Reference Deck
                     </Button>
                   </a>
                   <a href="/Not-EitherOr-But-BothAnd.pdf" download>

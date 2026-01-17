@@ -93,8 +93,68 @@ export default function Articles() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Second Featured Article: Fighting Back */}
       <section className="py-16 bg-card">
+        <div className="container">
+          <Card className="overflow-hidden border-primary/20 hover:border-primary/40 transition-colors">
+            <CardContent className="p-0">
+              <div className="grid md:grid-cols-5 gap-0">
+                {/* Visual Section */}
+                <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-primary/5 p-12 flex items-center justify-center">
+                  <div className="text-center">
+                    <Scale className="h-24 w-24 text-primary mx-auto mb-6" />
+                    <p className="text-sm text-accent-font text-primary font-semibold tracking-wide">
+                      STRATEGIC GUIDE
+                    </p>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="md:col-span-3 p-8 md:p-12">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded">
+                      Strategic Guide
+                    </span>
+                    <span className="text-sm text-muted-foreground">2026</span>
+                  </div>
+
+                  <h3 className="font-display text-3xl font-bold mb-4">
+                    Fighting Back: Administrative Pathways for ADA Compliance in Family Courts
+                  </h3>
+
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    A Strategic Guide to Federal Remediation Channels
+                  </p>
+
+                  <p className="text-base text-foreground/70 mb-6 leading-relaxed">
+                    A comprehensive roadmap for disabled parents, advocates, and legal professionals seeking 
+                    to utilize federal administrative channels to report and remediate systemic violations. 
+                    Covers DOJ Title II complaints, HHS Section 504 complaints, the P&A system, DOJ Statements 
+                    of Interest, and NCD policy feedback.
+                  </p>
+
+                  <div className="flex flex-wrap gap-4">
+                    <Link href="/article/fighting-back-administrative-pathways">
+                      <Button style={{ color: '#ffffff' }}>
+                        <FileText className="mr-2 h-4 w-4" />
+                        Read Full Article
+                      </Button>
+                    </Link>
+                    <a href="/Fighting-Back-Administrative-Pathways-Full-Guide.pdf" download>
+                      <Button variant="outline" style={{ color: '#ffffff' }}>
+                        Download Full Guide PDF
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Coming Soon Section */}
+      <section className="py-16 bg-background">
         <div className="container">
           <h2 className="text-3xl font-display font-bold mb-12">More Articles Coming Soon</h2>
 

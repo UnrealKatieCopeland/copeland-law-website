@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SkipLink from "./components/SkipLink";
 import Home from "./pages/Home";
+import Framework from "./pages/Framework";
 import About from "./pages/About";
 
 import Resources from "./pages/Resources";
@@ -18,8 +19,8 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/about"} component={About} />
-
+      <Route path={"/framework"} component={Framework} />
+      <Route path={"/404"} component={NotFound} />
       <Route path={"/resources"} component={Resources} />
       <Route path={"/articles"} component={Articles} />
       <Route path={"/contact"} component={Contact} />

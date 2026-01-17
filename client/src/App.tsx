@@ -10,9 +10,9 @@ import SkipLink from "./components/SkipLink";
 import Home from "./pages/Home";
 import Framework from "./pages/Framework";
 import About from "./pages/About";
-
 import Resources from "./pages/Resources";
 import Articles from "./pages/Articles";
+import ArticleNotEitherOr from "./pages/ArticleNotEitherOr";
 import Contact from "./pages/Contact";
 
 function Router() {
@@ -20,9 +20,10 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/framework"} component={Framework} />
-      <Route path={"/404"} component={NotFound} />
+      <Route path={"/about"} component={About} />
       <Route path={"/resources"} component={Resources} />
       <Route path={"/articles"} component={Articles} />
+      <Route path={"/article/not-eitheror-but-bothand"} component={ArticleNotEitherOr} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

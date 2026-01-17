@@ -42,17 +42,17 @@ export default function Framework() {
 
       {/* Interactive Presentation */}
       <section className="py-16 bg-background">
-        <div className="container">
-          <h2 className="text-center mb-8">Interactive Presentation</h2>
-          <div className="max-w-4xl mx-auto">
-            <iframe 
-              src="https://gamma.app/embed/8m5h7tdn35dza2h" 
-              style={{width: '100%', maxWidth: '100%', height: '450px', border: 'none', borderRadius: '8px'}} 
-              allow="fullscreen" 
-              title="Not Either/Or, But Both/And - Interactive Presentation"
-              aria-label="Interactive presentation of Not Either/Or, But Both/And framework"
-            />
-          </div>
+        <div className="container text-center">
+          <h2 className="mb-6">Interactive Presentation</h2>
+          <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+            View the full framework in an interactive, visually rich presentation format.
+          </p>
+          <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer" aria-label="View interactive presentation on Gamma">
+            <Button size="lg" variant="outline" style={{color: '#ffffff'}}>
+              <BookOpen className="mr-2 h-5 w-5" />
+              View Interactive Version
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -407,15 +407,118 @@ export default function Framework() {
         </div>
       </section>
 
+      {/* Share This Framework */}
+      <section className="py-16 bg-background">
+        <div className="container-reading text-center">
+          <h2 className="mb-6">Share This Framework</h2>
+          <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+            Help spread awareness of belief-neutral disability access analysis in courtrooms.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => {
+                const url = window.location.href;
+                const title = "Not Either/Or, But Both/And - The Copeland Questions™";
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
+              }}
+              aria-label="Share on Twitter"
+              style={{ color: '#ffffff' }}
+            >
+              Share on Twitter
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => {
+                const url = window.location.href;
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
+              }}
+              aria-label="Share on LinkedIn"
+              style={{ color: '#ffffff' }}
+            >
+              Share on LinkedIn
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+              }}
+              aria-label="Copy link"
+              style={{ color: '#ffffff' }}
+            >
+              Copy Link
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Cite This Work Section */}
+      <section className="py-16 bg-card">
+        <div className="container-reading">
+          <h2 className="mb-8">Cite This Work</h2>
+          
+          <Card className="border-border/40">
+            <CardContent className="p-8">
+              <p className="text-sm text-muted-foreground mb-6">
+                Use the following citation formats to reference this framework in your work:
+              </p>
+
+              <div className="space-y-6">
+                {/* APA Format */}
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-2">APA (7th Edition)</p>
+                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
+                    Copeland, K. (2026). <em>Not either/or, but both/and: Dialectics, disability, and meaningful access in court</em>. Copeland Law. https://copelandlawtexas.com/framework
+                  </div>
+                </div>
+
+                {/* Bluebook Format */}
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-2">Bluebook (21st Edition)</p>
+                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
+                    Kathryn Copeland, <em>Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court</em>, Copeland Law (2026), https://copelandlawtexas.com/framework.
+                  </div>
+                </div>
+
+                {/* MLA Format */}
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-2">MLA (9th Edition)</p>
+                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
+                    Copeland, Kathryn. "Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court." <em>Copeland Law</em>, 2026, copelandlawtexas.com/framework.
+                  </div>
+                </div>
+
+                {/* Chicago Format */}
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-2">Chicago (17th Edition)</p>
+                  <div className="p-4 bg-muted/30 rounded font-mono text-sm">
+                    Copeland, Kathryn. "Not Either/Or, But Both/And: Dialectics, Disability, and Meaningful Access in Court." Copeland Law, 2026. https://copelandlawtexas.com/framework.
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-border/40">
+                <p className="text-sm text-muted-foreground">
+                  © 2026 Kathryn Copeland. All Rights Reserved.
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  The Copeland Questions™ is a trademark of Kathryn Copeland.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Footer Note */}
-      <section className="py-12 bg-card">
+      <section className="py-12 bg-background">
         <div className="container-reading text-center">
           <p className="text-base text-foreground/60 mb-4">
             This framework is part of ongoing work on courtroom accessibility, disability law, and 
             procedural justice.
-          </p>
-          <p className="text-sm text-foreground/60">
-            © 2026 Kathryn Copeland. All Rights Reserved.
           </p>
         </div>
       </section>

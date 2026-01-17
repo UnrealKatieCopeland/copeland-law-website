@@ -5,7 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle } from "lucide-react";
+import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle, Calculator, GitBranch, HelpCircle } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Resources() {
@@ -185,6 +185,96 @@ export default function Resources() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Tools */}
+      <section className="py-16 bg-card">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="mb-4">Interactive Tools</h2>
+            <p className="text-lg text-foreground/70">
+              Practical tools to help you understand and request accommodations
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow border-primary/30">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <Calculator className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Accommodation Calculator</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Get personalized recommendations
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  Answer questions about your situation and receive personalized accommodation 
+                  recommendations with legal foundations, case law citations, and a ready-to-submit 
+                  template letter.
+                </p>
+                <Link href="/accommodation-calculator">
+                  <Button className="w-full" style={{color: '#ffffff'}}>
+                    Use Calculator
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <GitBranch className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Decision Tree</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Navigate step-by-step
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  Interactive guidance for analyzing accommodation requests using real courtroom 
+                  scenarios. Answer questions and receive legal analysis with specific next steps.
+                </p>
+                <Link href="/decision-tree">
+                  <Button className="w-full" style={{color: '#ffffff'}}>
+                    Use Decision Tree
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <HelpCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Interactive Quiz</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Test your understanding
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  10 real courtroom scenarios with immediate feedback and detailed case law 
+                  explanations. Learn how The Copeland Questions™ apply in practice.
+                </p>
+                <Link href="/quiz">
+                  <Button className="w-full" style={{color: '#ffffff'}}>
+                    Take the Quiz
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

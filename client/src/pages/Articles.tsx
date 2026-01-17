@@ -93,7 +93,7 @@ export default function Articles() {
         </div>
       </section>
 
-      {/* Second Featured Article: Fighting Back */}
+      {/* Second Featured Article: Administrative Pathways */}
       <section className="py-16 bg-card">
         <div className="container">
           <Card className="overflow-hidden border-primary/20 hover:border-primary/40 transition-colors">
@@ -119,7 +119,7 @@ export default function Articles() {
                   </div>
 
                   <h3 className="font-display text-3xl font-bold mb-4">
-                    Fighting Back: Administrative Pathways for ADA Compliance in Family Courts
+                    Administrative Pathways to ADA Compliance in Family Courts
                   </h3>
 
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -134,13 +134,13 @@ export default function Articles() {
                   </p>
 
                   <div className="flex flex-wrap gap-4">
-                    <Link href="/article/fighting-back-administrative-pathways">
+                    <Link href="/article/administrative-pathways">
                       <Button style={{ color: '#ffffff' }}>
                         <FileText className="mr-2 h-4 w-4" />
                         Read Full Article
                       </Button>
                     </Link>
-                    <a href="/Fighting-Back-Administrative-Pathways-Full-Guide.pdf" download>
+                    <a href="/Administrative-Pathways-ADA-Compliance-Full-Guide.pdf" download>
                       <Button variant="outline" style={{ color: '#ffffff' }}>
                         Download Full Guide PDF
                       </Button>

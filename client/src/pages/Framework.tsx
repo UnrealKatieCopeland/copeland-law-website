@@ -5,7 +5,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Scale, FileText, BookOpen, Download, Users, Target, AlertCircle, ExternalLink, GitBranch } from "lucide-react";
+import { Scale, FileText, BookOpen, Download, Users, Target, AlertCircle, ExternalLink, GitBranch, Calculator } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
@@ -328,6 +328,30 @@ export default function Framework() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Accommodation Calculator */}
+          <Card className="border-primary/30 mb-8">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <Calculator className="h-6 w-6 text-primary" />
+                    <h3 className="text-xl font-bold">Not Sure What to Request?</h3>
+                  </div>
+                  <p className="text-base text-foreground/70 leading-relaxed">
+                    Use our Accommodation Calculator to get personalized recommendations based on your 
+                    situation, complete with legal foundations, case law citations, and a ready-to-submit 
+                    template letter.
+                  </p>
+                </div>
+                <Link href="/accommodation-calculator">
+                  <Button size="lg" style={{color: '#ffffff'}}>
+                    Use Calculator
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Test Your Understanding */}
           <Card className="border-primary/30">

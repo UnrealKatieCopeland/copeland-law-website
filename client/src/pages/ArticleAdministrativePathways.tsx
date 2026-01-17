@@ -9,10 +9,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Download, Share2, FileText, Link as LinkIcon, AlertCircle } from "lucide-react";
 import { Link } from "wouter";
 
-export default function ArticleFightingBack() {
+export default function ArticleAdministrativePathways() {
   const handleShare = (platform: string) => {
     const url = window.location.href;
-    const title = "Fighting Back: Administrative Pathways for ADA Compliance in Family Courts";
+    const title = "Administrative Pathways to ADA Compliance in Family Courts";
     
     const shareUrls: Record<string, string> = {
       twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
@@ -43,11 +43,11 @@ export default function ArticleFightingBack() {
             </div>
             
             <h1 className="mb-6">
-              Fighting Back: Administrative Pathways for ADA Compliance in Family Courts
+              Administrative Pathways to ADA Compliance in Family Courts
             </h1>
             
             <p className="text-2xl text-foreground/70 leading-relaxed font-light mb-8">
-              A Strategic Guide to Federal Remediation Channels
+              Navigating Federal Remediation Channels for Systemic Accessibility Barriers
             </p>
 
             <div className="flex items-center justify-between pt-8 border-t border-border/40">
@@ -356,7 +356,7 @@ export default function ArticleFightingBack() {
                 </ul>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="/Fighting-Back-Administrative-Pathways-Full-Guide.pdf" download>
+                  <a href="/Administrative-Pathways-ADA-Compliance-Full-Guide.pdf" download>
                     <Button style={{ color: '#ffffff' }}>
                       <Download className="mr-2 h-4 w-4" />
                       Download Full Guide PDF

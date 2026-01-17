@@ -47,8 +47,8 @@ export default function AccommodationCalculator() {
     { value: "fast_pacing", label: "Court proceedings move too quickly" },
     { value: "complex_language", label: "Legal jargon / complex language" },
     { value: "long_hearings", label: "Long hearings without breaks" },
-    { value: "written_only", label: "Documents in written format only" },
-    { value: "audio_only", label: "Verbal instructions without written backup" },
+    { value: "written_only", label: "Difficulty understanding verbal-only instructions without written backup" },
+    { value: "audio_only", label: "Difficulty retaining verbal instructions without written confirmation" },
     { value: "physical_access", label: "Physical barriers (stairs, seating, etc.)" },
     { value: "sensory_overload", label: "Sensory overload (noise, lights, crowds)" },
     { value: "memory_issues", label: "Difficulty remembering instructions" },
@@ -185,20 +185,20 @@ export default function AccommodationCalculator() {
     const recs = generateRecommendations();
     const date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     
-    let letter = `[Your Name]\n[Your Address]\n[City, State ZIP]\n[Phone Number]\n[Email Address]\n\n${date}\n\n[Court Name]\n[Judge's Name]\n[Court Address]\n[City, State ZIP]\n\nRe: Request for Reasonable Modifications Under the ADA\n     Case No.: [Your Case Number]\n\nDear [Judge's Name / Court Administrator],\n\nI am writing to request reasonable modifications under Title II of the Americans with Disabilities Act, 42 U.S.C. § 12131 et seq., to ensure my meaningful access to court proceedings in the above-referenced matter.\n\nI have [describe disability in general terms, e.g., "a hearing impairment," "a cognitive disability," "a mobility impairment"]. As a result of this disability, I experience barriers when participating in standard court procedures, specifically:\n\n`;
+    let letter = `[Your Name]\n[Your Address]\n[City, State ZIP]\n[Phone Number]\n[Email Address]\n\n${date}\n\n[Court Name]\n[Judge's Name]\n[Court Address]\n[City, State ZIP]\n\nRe: Request for Reasonable Accommodations Under the ADA\n     Case No.: [Your Case Number]\n\nDear [Judge's Name / Court Administrator],\n\nI respectfully request reasonable accommodations to ensure my equal access to justice and meaningful participation in the [date] hearing and all future proceedings in this matter.\n\nI. DISABILITY STATUS\n\nI have been diagnosed with the following condition(s), each of which constitutes a "disability" under 42 U.S.C. § 12102(1):\n\n[List your specific diagnoses here, e.g.:\n• Traumatic Brain Injury (TBI) with persistent cognitive sequelae\n• Hearing impairment\n• Chronic pain condition]\n\nII. SUBSTANTIAL LIMITATION OF MAJOR LIFE ACTIVITIES\n\nMy disability substantially limits the following major life activities within the meaning of 42 U.S.C. § 12102(2):\n\n[List affected activities, e.g.:\n• Thinking and concentrating\n• Communicating\n• Hearing\n• Standing/walking]\n\nIII. BARRIERS TO ACCESS\n\nAs a result of these disabilities, I experience the following barriers when participating in standard court procedures:\n\n`;
 
     barriers.forEach((barrier, index) => {
       const barrierLabel = barrierTypes.find(b => b.value === barrier)?.label || barrier;
       letter += `${index + 1}. ${barrierLabel}\n`;
     });
 
-    letter += `\nTo ensure my meaningful participation, I respectfully request the following reasonable modifications:\n\n`;
+    letter += `\nIV. REQUESTED ACCOMMODATIONS\n\nTo ensure my equal access to justice, I respectfully request the following reasonable accommodations:\n\n`;
 
     recs.forEach((rec, index) => {
       letter += `${index + 1}. ${rec.title}\n   ${rec.description}\n   Legal Basis: ${rec.legalBasis}\n\n`;
     });
 
-    letter += `These modifications are necessary to provide me with an equal opportunity to participate in court proceedings, as required by 28 C.F.R. § 35.130(b)(1). They do not fundamentally alter the nature of the proceedings or impose undue burden.\n\nI am available to discuss these accommodations and provide any additional information needed. Please confirm receipt of this request and advise of any additional steps required.\n\nThank you for your attention to this matter.\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]`;
+    letter += `V. LEGAL BASIS\n\nA. Americans with Disabilities Act\n42 U.S.C. § 12132 provides that no qualified individual with a disability shall be excluded from participation in or denied the benefits of the services, programs, or activities of a public entity. The Court has an affirmative obligation to provide reasonable accommodations to ensure equal access to its proceedings. Tennessee v. Lane, 541 U.S. 509, 533-34 (2004).\n\nB. Rehabilitation Act\n29 U.S.C. § 794 prohibits discrimination on the basis of disability by any program receiving federal financial assistance, including state courts.\n\nC. ADA Regulations\n28 C.F.R. § 35.160(a)(1) requires public entities to take appropriate steps to ensure that communications with individuals with disabilities are as effective as communications with others. 28 C.F.R. § 35.164 requires reasonable modifications in policies, practices, or procedures when necessary to avoid discrimination.\n\nVI. CONCLUSION\n\nThe requested accommodations do not fundamentally alter the nature of the proceedings and are necessary to provide me with equal access to justice as required by federal law. The violation of federal laws enacted to protect the civil rights of people with disabilities is itself a form of harm. See EEOC v. Cosmair, Inc., 821 F.2d 1085, 1090 (5th Cir. 1987) ("irreparable injury should be presumed" when civil rights statute is violated).\n\nI am available to discuss these accommodations and provide any additional medical documentation if needed. Please confirm receipt of this request within 5 business days and advise of any additional steps required.\n\nRespectfully submitted,\n\n[Your Signature]\n[Your Printed Name]\n\n---\n\nOPTIONAL STRATEGIC ADDITION:\nIf you have related legal claims (Fair Housing, employment discrimination, etc.), you may add:\n\n"I further request that this Court make specific findings of fact regarding my disability status and the necessity of these accommodations, as such findings may be relevant to related legal claims."`;
 
     return letter;
   };
@@ -292,7 +292,6 @@ export default function AccommodationCalculator() {
               type="submit" 
               size="lg"
               disabled={!proceedingType || disabilities.length === 0 || barriers.length === 0}
-              style={{ color: '#ffffff' }}
             >
               Generate Recommendations
             </Button>
@@ -301,7 +300,6 @@ export default function AccommodationCalculator() {
               variant="outline" 
               size="lg"
               onClick={handleReset}
-              style={{ color: '#ffffff' }}
             >
               Reset
             </Button>
@@ -320,7 +318,6 @@ export default function AccommodationCalculator() {
             <Button 
               variant="outline" 
               onClick={handleReset}
-              style={{ color: '#ffffff' }}
             >
               Start Over
             </Button>
@@ -336,7 +333,7 @@ export default function AccommodationCalculator() {
                   <p className="text-base text-foreground/70 mb-4">
                     We've generated a complete ADA accommodation request letter with all your selected modifications, legal citations, and proper formatting. Download it, fill in your personal information, and submit it to the court.
                   </p>
-                  <Button onClick={downloadTemplateLetter} style={{ color: '#ffffff' }}>
+                  <Button onClick={downloadTemplateLetter}>
                     <Download className="mr-2 h-4 w-4" />
                     Download Letter Template
                   </Button>

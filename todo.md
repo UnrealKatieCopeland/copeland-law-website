@@ -11,6 +11,21 @@
 
 ## Current Tasks
 
+### Phase 3: Enhance Template Letter with Authentic Motion Language ✅ COMPLETE
+- [x] Restructured letter with Katie's proven format (I-VI sections)
+- [x] Added "equal access to justice" framing from 2025 motions
+- [x] Included "Disability Status" section with 42 U.S.C. § 12102(1) citation
+- [x] Added "Substantial Limitation of Major Life Activities" section
+- [x] Strengthened legal basis with Tennessee v. Lane, Rehabilitation Act, specific CFR sections
+- [x] Added "irreparable injury" language from EEOC v. Cosmair
+- [x] Included optional strategic addition for findings of fact request
+- [x] Changed closing from "Thank you" to "Respectfully submitted" (Katie's style)
+
+### Phase 1: Fix Calculator UI Issues ✅ COMPLETE
+- [x] Fix button visibility - removed inline white color styles to use theme defaults
+- [x] Revise barrier wording - changed "Documents in written format only" to "Difficulty understanding verbal-only instructions without written backup"
+- [x] Revise "audio_only" barrier to "Difficulty retaining verbal instructions without written confirmation"
+
 ### Phase 1: Rename Article to Non-Adversarial Framing ✅ COMPLETE
 - [x] Rename article from "Fighting Back: Administrative Pathways..." to solution-oriented title
 - [x] Chose "Administrative Pathways to ADA Compliance in Family Courts"

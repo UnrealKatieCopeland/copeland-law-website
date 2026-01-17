@@ -4,8 +4,8 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, Download, BookOpen, Scale, CheckCircle, Lock } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Resources() {
@@ -98,6 +98,94 @@ export default function Resources() {
             Access comprehensive resources designed to empower individuals navigating 
             accessibility challenges in the legal system.
           </p>
+        </div>
+      </section>
+
+      {/* Publications Section */}
+      <section className="py-16 bg-card">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-center mb-4">Publications</h2>
+            <p className="text-center text-foreground/70 mb-12 text-lg">
+              Citation-ready scholarly work and frameworks for disability rights advocacy
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Not Either/Or, But Both/And */}
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="flex items-start gap-3">
+                    <FileText className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl mb-2">Not Either/Or, But Both/And</h3>
+                      <p className="text-sm text-foreground/60 font-normal">
+                        Dialectics, Disability, and Meaningful Access in Court
+                      </p>
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                    A framework for analyzing courtroom accessibility without credibility contests, 
+                    diagnostic gatekeeping, or inquiries into judicial intent. Grounded in existing 
+                    disability law and dialectical reasoning.
+                  </p>
+                  
+                  <div className="flex flex-col gap-3">
+                    <a href="/Not-EitherOr-But-BothAnd.pdf" download aria-label="Download Not Either/Or, But Both/And PDF">
+                      <Button className="w-full" style={{color: '#ffffff'}}>
+                        <Download className="mr-2 h-4 w-4" />
+                        Download PDF
+                      </Button>
+                    </a>
+                    <Link href="/framework">
+                      <Button variant="outline" className="w-full">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        View Interactive
+                      </Button>
+                    </Link>
+                  </div>
+                  
+                  <p className="text-xs text-foreground/50 mt-4">
+                    © 2026 Kathryn Copeland. All Rights Reserved.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* CART Model Guidelines */}
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="flex items-start gap-3">
+                    <BookOpen className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl mb-2">CART in the Courtroom</h3>
+                      <p className="text-sm text-foreground/60 font-normal">
+                        Model Guidelines (2002)
+                      </p>
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                    Official model guidelines for Communication Access Realtime Translation (CART) 
+                    in courtrooms. A joint project by the American Judges Foundation and National 
+                    Court Reporters Foundation.
+                  </p>
+                  
+                  <a href="/cart-in-the-courtroom-model-guidelines.pdf" download aria-label="Download CART Model Guidelines PDF">
+                    <Button className="w-full" style={{color: '#ffffff'}}>
+                      <Download className="mr-2 h-4 w-4" />
+                      Download PDF
+                    </Button>
+                  </a>
+                  
+                  <p className="text-xs text-foreground/50 mt-4">
+                    Source: American Judges Foundation & National Court Reporters Foundation
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 

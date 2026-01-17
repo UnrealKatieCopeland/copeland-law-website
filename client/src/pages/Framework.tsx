@@ -4,7 +4,8 @@
  */
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Scale, FileText, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Scale, FileText, BookOpen, Download } from "lucide-react";
 
 export default function Framework() {
   return (
@@ -19,10 +20,39 @@ export default function Framework() {
           <p className="text-2xl text-foreground/70 leading-relaxed font-light mb-8">
             Dialectics, Disability, and Meaningful Access in Court
           </p>
-          <p className="text-lg text-foreground/60 leading-relaxed">
+          <p className="text-lg text-foreground/60 leading-relaxed mb-8">
             A framework for analyzing courtroom accessibility without credibility contests, 
             diagnostic gatekeeping, or inquiries into judicial intent.
           </p>
+          
+          {/* Download and View Options */}
+          <div className="flex flex-wrap gap-4 items-center">
+            <a href="/Not-EitherOr-But-BothAnd.pdf" download aria-label="Download Not Either/Or, But Both/And PDF">
+              <Button size="lg" style={{color: '#ffffff'}}>
+                <Download className="mr-2 h-5 w-5" />
+                Download PDF
+              </Button>
+            </a>
+            <p className="text-sm text-foreground/60">
+              © 2026 Kathryn Copeland. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Presentation */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <h2 className="text-center mb-8">Interactive Presentation</h2>
+          <div className="max-w-4xl mx-auto">
+            <iframe 
+              src="https://gamma.app/embed/8m5h7tdn35dza2h" 
+              style={{width: '100%', maxWidth: '100%', height: '450px', border: 'none', borderRadius: '8px'}} 
+              allow="fullscreen" 
+              title="Not Either/Or, But Both/And - Interactive Presentation"
+              aria-label="Interactive presentation of Not Either/Or, But Both/And framework"
+            />
+          </div>
         </div>
       </section>
 

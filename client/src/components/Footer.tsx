@@ -61,8 +61,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Legal Disclaimer */}
         <div className="mt-12 pt-8 border-t border-border/40">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">Legal Disclaimer:</strong> This website provides educational resources and information only. Nothing on this site constitutes legal advice or creates an attorney-client relationship. Laws and court procedures vary by jurisdiction. For case-specific guidance, consult an attorney experienced in ADA litigation and disability rights law in your area.
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-border/40">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Copeland Law. All rights reserved.

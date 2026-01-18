@@ -5,12 +5,19 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertTriangle, Scale, FileText, ExternalLink } from "lucide-react";
+import { AlertTriangle, Scale, FileText, ExternalLink, AlertCircle } from "lucide-react";
 import { Link } from "wouter";
+import SEOHead from "@/components/SEOHead";
 
 export default function ExamplesOfHarm() {
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Examples of Harm"
+        description="Documented cases showing the consequences when courts fail to apply disability rights law. Real stories of families harmed by belief-based assumptions rather than effect-based analysis, including the Gordon v. Massachusetts DCF case."
+        path="/examples-of-harm"
+        type="article"
+      />
       {/* Hero Section */}
       <section className="py-24 bg-card">
         <div className="container-reading">
@@ -34,6 +41,18 @@ export default function ExamplesOfHarm() {
             belief-based assumptions about disability rather than effect-based analysis of actual 
             capabilities with appropriate supports.
           </p>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-8 bg-amber-500/5 border-y border-amber-500/20">
+        <div className="container-reading">
+          <div className="flex gap-4 items-start max-w-3xl mx-auto">
+            <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-1" aria-hidden="true" />
+            <div className="text-sm text-foreground/80">
+              <strong className="text-foreground">Educational Documentation:</strong> This page provides educational information about documented civil rights violations and is not legal advice. It does not create an attorney-client relationship. For case-specific guidance, consult an attorney experienced in ADA litigation and disability rights law.
+            </div>
+          </div>
         </div>
       </section>
 

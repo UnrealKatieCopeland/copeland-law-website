@@ -3,12 +3,18 @@
  * Features The Copeland Questions™ Case Law Quiz
  */
 
-import { Scale, Brain, Award } from "lucide-react";
+import { Scale, Brain, Award, AlertCircle } from "lucide-react";
 import CopelandQuestionsQuiz from "@/components/CopelandQuestionsQuiz";
+import SEOHead from "@/components/SEOHead";
 
 export default function Quiz() {
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="The Copeland Questions™ Quiz"
+        description="Test your understanding of disability access law with 10 real courtroom scenarios. Learn to identify reasoning errors judges make when evaluating ADA accommodation requests. Includes case law citations and detailed explanations."
+        path="/quiz"
+      />
       {/* Hero Section */}
       <section className="py-24 bg-card">
         <div className="container-reading">
@@ -62,6 +68,18 @@ export default function Quiz() {
                   Learn immediately with detailed explanations for each question
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-8 bg-amber-500/5 border-y border-amber-500/20">
+        <div className="container-reading">
+          <div className="flex gap-4 items-start max-w-3xl mx-auto">
+            <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-1" aria-hidden="true" />
+            <div className="text-sm text-foreground/80">
+              <strong className="text-foreground">Educational Resource:</strong> This quiz provides educational guidance only and is not legal advice. It does not create an attorney-client relationship. For case-specific guidance, consult an attorney experienced in ADA litigation.
             </div>
           </div>
         </div>

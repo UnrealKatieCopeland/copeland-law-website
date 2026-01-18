@@ -18,6 +18,7 @@ import Quiz from "./pages/Quiz";
 import DecisionTree from "./pages/DecisionTree";
 import ExamplesOfHarm from "./pages/ExamplesOfHarm";
 import AccommodationCalculatorPage from "./pages/AccommodationCalculatorPage";
+import ToolsHub from "./pages/ToolsHub";
 import Contact from "./pages/Contact";
 
 function Router() {
@@ -30,6 +31,7 @@ function Router() {
       <Route path={"/articles"} component={Articles} />
       <Route path={"/article/not-eitheror-but-bothand"} component={ArticleNotEitherOr} />
       <Route path={"/article/administrative-pathways"} component={ArticleAdministrativePathways} />
+      <Route path={"/tools"} component={ToolsHub} />
       <Route path={"/quiz"} component={Quiz} />
       <Route path={"/decision-tree"} component={DecisionTree} />
       <Route path={"/examples-of-harm"} component={ExamplesOfHarm} />

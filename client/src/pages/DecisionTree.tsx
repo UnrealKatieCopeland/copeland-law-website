@@ -4,7 +4,8 @@
  */
 
 import { Card, CardContent } from "@/components/ui/card";
-import { GitBranch, Scale, BookOpen } from "lucide-react";
+import { GitBranch, Scale, BookOpen, AlertCircle } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import AccommodationDecisionTree from "@/components/AccommodationDecisionTree";
@@ -12,6 +13,11 @@ import AccommodationDecisionTree from "@/components/AccommodationDecisionTree";
 export default function DecisionTree() {
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Accommodation Decision Tree"
+        description="Navigate ADA compliance step-by-step with an interactive decision tree. Answer questions about your situation and receive legal guidance, case law citations, and concrete next steps for accommodation requests."
+        path="/decision-tree"
+      />
       {/* Hero Section */}
       <section className="py-24 bg-card">
         <div className="container-reading">
@@ -82,6 +88,18 @@ export default function DecisionTree() {
               disability law. It is not a substitute for legal advice. For case-specific counsel, 
               consult with an attorney experienced in ADA litigation.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Disclaimer */}
+      <section className="py-8 bg-amber-500/5 border-y border-amber-500/20">
+        <div className="container">
+          <div className="flex gap-4 items-start max-w-3xl mx-auto">
+            <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-1" aria-hidden="true" />
+            <div className="text-sm text-foreground/80">
+              <strong className="text-foreground">Educational Tool:</strong> This decision tree provides educational guidance only and is not legal advice. It does not create an attorney-client relationship. For case-specific guidance, consult an attorney experienced in ADA litigation.
+            </div>
           </div>
         </div>
       </section>

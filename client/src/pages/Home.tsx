@@ -9,10 +9,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Scale, FileText, Users } from "lucide-react";
 import { Link } from "wouter";
+import SEOHead from "@/components/SEOHead";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Home"
+        description="Legal advocacy focused on disability rights, ADA Title II compliance, and family law. Explore The Copeland Questions™ framework and interactive tools for understanding accommodation law in judicial proceedings."
+        path="/"
+      />
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center">
         <div 

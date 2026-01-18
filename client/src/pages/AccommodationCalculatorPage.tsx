@@ -8,10 +8,16 @@ import { Button } from "@/components/ui/button";
 import { Calculator, Scale } from "lucide-react";
 import { Link } from "wouter";
 import AccommodationCalculator from "@/components/AccommodationCalculator";
+import SEOHead from "@/components/SEOHead";
 
 export default function AccommodationCalculatorPage() {
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Accommodation Calculator"
+        description="Get personalized ADA accommodation recommendations with legal citations and a downloadable template request letter. Answer 3 questions about your situation to receive customized guidance tailored to your proceeding type and disability."
+        path="/accommodation-calculator"
+      />
       {/* Hero Section */}
       <section className="py-24 bg-card">
         <div className="container">

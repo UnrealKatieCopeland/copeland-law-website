@@ -24,11 +24,12 @@ export default function ToolsHub() {
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
           <div className="container max-w-4xl text-center">
+            <p className="text-accent-font text-primary mb-4">Interactive Tools</p>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Interactive Tools for Disability Access Law
+              Asking the Right Questions Changes Everything.
             </h1>
             <p className="text-xl text-foreground/70 leading-relaxed mb-8">
-              Practical resources to help you understand, request, and implement ADA accommodations in legal proceedings. Based on The Copeland Questions™ framework.
+              Practical resources to help you understand, request, and implement ADA accommodations in judicial proceedings. Based on The Copeland Questions framework.
             </p>
             
             {/* Legal Disclaimer */}

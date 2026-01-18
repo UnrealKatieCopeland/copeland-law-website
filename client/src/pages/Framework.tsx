@@ -38,14 +38,19 @@ export default function Framework() {
             Not Either/Or, But Both/And
           </h1>
           
-          <p className="text-2xl text-foreground/70 leading-relaxed font-light mb-8">
+          <p className="text-2xl text-foreground/70 leading-relaxed font-light mb-6">
             Dialectics, Disability, and Meaningful Access in Court
           </p>
 
-          <p className="text-lg text-foreground/60 leading-relaxed mb-12">
-            A belief-neutral, effect-based framework for analyzing courtroom accessibility without 
-            credibility contests, diagnostic gatekeeping, or inquiries into judicial intent.
-          </p>
+          <div className="p-6 bg-primary/5 border-l-4 border-primary rounded-r mb-8">
+            <p className="text-xl text-foreground font-medium mb-2">
+              Accessibility isn't about belief. It's about effect.
+            </p>
+            <p className="text-base text-foreground/70">
+              A belief-neutral, effect-based framework for analyzing courtroom accessibility without 
+              credibility contests, diagnostic gatekeeping, or inquiries into judicial intent.
+            </p>
+          </div>
           
           {/* Primary Actions */}
           <div className="flex flex-wrap gap-4 mb-8">

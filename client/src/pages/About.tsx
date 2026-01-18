@@ -13,10 +13,12 @@ export default function About() {
       <section className="py-24 bg-card">
         <div className="container-reading">
           <p className="text-accent-font text-primary mb-6">About</p>
-          <h1 className="mb-8">Kathryn "Katie" Copeland</h1>
-          <p className="text-2xl text-foreground/70 leading-relaxed font-light">
-            Disability rights advocate, legal scholar, and developer of The Copeland Questions™ 
-            framework for accessibility compliance in judicial settings.
+          <h1 className="mb-8">Bridging the Gap Between Disability Rights and Courtroom Practice</h1>
+          <p className="text-2xl text-foreground/70 leading-relaxed font-light mb-6">
+            Documenting the problem. Designing the solution.
+          </p>
+          <p className="text-lg text-foreground/60">
+            Kathryn "Katie" Copeland, Attorney at Law, Texas
           </p>
         </div>
       </section>

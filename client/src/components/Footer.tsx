@@ -76,9 +76,10 @@ export default function Footer() {
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Copeland Law. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground">
-              Kathryn "Katie" Copeland, Attorney at Law
-            </p>
+            <div className="text-xs text-muted-foreground text-center md:text-right">
+              <p>Kathryn "Katie" Copeland, Attorney at Law</p>
+              <p className="mt-1">The Copeland Questions is a trademark of Kathryn Copeland</p>
+            </div>
           </div>
         </div>
       </div>

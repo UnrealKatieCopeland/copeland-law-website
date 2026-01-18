@@ -16,7 +16,7 @@ export default function Home() {
     <div className="min-h-screen">
       <SEOHead 
         title="Home"
-        description="Legal advocacy focused on disability rights, ADA Title II compliance, and family law. Explore The Copeland Questions™ framework and interactive tools for understanding accommodation law in judicial proceedings."
+        description="Asking the Right Questions Changes Everything. A framework for understanding and implementing ADA compliance in judicial proceedings. Accessibility isn't about belief—it's about effect."
         path="/"
       />
       {/* Hero Section */}
@@ -29,15 +29,17 @@ export default function Home() {
           }}
         />
         <div className="relative z-10 container-reading text-white">
-          <h1 className="text-5xl md:text-6xl mb-6 text-white">
-            Kathryn "Katie" Copeland
+          <h1 className="text-5xl md:text-6xl mb-6 text-white font-display">
+            Asking the Right Questions Changes Everything.
           </h1>
           <p className="text-2xl md:text-3xl mb-8 font-light text-white/90">
-            Disability Rights Advocate & Legal Scholar
+            A framework for understanding and implementing ADA compliance in judicial proceedings
           </p>
-          <p className="text-xl leading-relaxed mb-8 text-white/80">
-            Developing frameworks for accessibility compliance, documenting systemic barriers, 
-            and advancing the intersection of disability rights and due process.
+          <p className="text-xl leading-relaxed mb-6 text-white/80">
+            Accessibility isn't about belief. It's about effect.
+          </p>
+          <p className="text-base text-white/70 mb-8">
+            Developed by Kathryn Copeland, Attorney at Law, Texas
           </p>
 
           <div className="flex flex-wrap gap-4">

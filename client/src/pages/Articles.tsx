@@ -75,13 +75,13 @@ export default function Articles() {
 
                   <div className="flex flex-wrap gap-4">
                     <Link href="/article/not-eitheror-but-bothand">
-                      <Button style={{ color: '#ffffff' }}>
+                      <Button>
                         <FileText className="mr-2 h-4 w-4" />
                         Read Full Article
                       </Button>
                     </Link>
                     <a href="/Not-EitherOr-But-BothAnd.pdf" download>
-                      <Button variant="outline" style={{ color: '#ffffff' }}>
+                      <Button variant="outline">
                         Download PDF
                       </Button>
                     </a>
@@ -135,13 +135,13 @@ export default function Articles() {
 
                   <div className="flex flex-wrap gap-4">
                     <Link href="/article/administrative-pathways">
-                      <Button style={{ color: '#ffffff' }}>
+                      <Button>
                         <FileText className="mr-2 h-4 w-4" />
                         Read Full Article
                       </Button>
                     </Link>
                     <a href="/Administrative-Pathways-ADA-Compliance-Full-Guide.pdf" download>
-                      <Button variant="outline" style={{ color: '#ffffff' }}>
+                      <Button variant="outline">
                         Download Full Guide PDF
                       </Button>
                     </a>
@@ -214,7 +214,7 @@ export default function Articles() {
             Learn more about the complete framework for disability access analysis in courtrooms.
           </p>
           <Link href="/framework">
-            <Button size="lg" style={{ color: '#ffffff' }}>
+            <Button size="lg">
               <Scale className="mr-2 h-5 w-5" />
               View Full Framework
             </Button>

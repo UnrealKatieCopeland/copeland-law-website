@@ -30,7 +30,7 @@ export default function ArticleDetail() {
         <section className="py-16 md:py-24 bg-gradient-to-b from-[#f8f6f3] to-white">
           <div className="container max-w-4xl">
             <Link href="/articles">
-              <Button variant="outline" className="mb-8" style={{ color: '#ffffff' }}>
+              <Button variant="outline" className="mb-8">
                 ← Back to Articles
               </Button>
             </Link>
@@ -51,17 +51,17 @@ export default function ArticleDetail() {
 
             <div className="flex flex-wrap gap-4">
               <a href="/not-eitheror-but-bothand.pdf" download>
-                <Button style={{ color: '#ffffff' }}>
+                <Button>
                   <Download className="mr-2 h-4 w-4" />
                   Download PDF
                 </Button>
               </a>
-              <Button variant="outline" onClick={handleShare} style={{ color: '#ffffff' }}>
+              <Button variant="outline" onClick={handleShare}>
                 <Share2 className="mr-2 h-4 w-4" />
                 Share Article
               </Button>
               <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" style={{ color: '#ffffff' }}>
+                <Button variant="outline">
                   View Interactive Version
                 </Button>
               </a>
@@ -350,7 +350,7 @@ export default function ArticleDetail() {
                       Model guidelines from the American Judges Foundation on providing communication access.
                     </p>
                     <a href="/cart-in-the-courtroom-model-guidelines.pdf" download>
-                      <Button variant="outline" style={{ color: '#ffffff' }}>
+                      <Button variant="outline">
                         <Download className="mr-2 h-4 w-4" />
                         Download Guidelines
                       </Button>
@@ -365,7 +365,7 @@ export default function ArticleDetail() {
                       Explore the full framework for disability access analysis in courtrooms.
                     </p>
                     <Link href="/framework">
-                      <Button variant="outline" style={{ color: '#ffffff' }}>
+                      <Button variant="outline">
                         View Framework
                       </Button>
                     </Link>
@@ -376,7 +376,7 @@ export default function ArticleDetail() {
 
             <div className="text-center my-16">
               <Link href="/articles">
-                <Button variant="outline" size="lg" style={{ color: '#ffffff' }}>
+                <Button variant="outline" size="lg">
                   ← Back to All Articles
                 </Button>
               </Link>

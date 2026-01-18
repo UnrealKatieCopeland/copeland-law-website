@@ -104,7 +104,7 @@ export default function AccommodationCalculatorPage() {
                 Learn the theoretical foundation behind these recommendations: a belief-neutral, effect-based framework for analyzing courtroom accessibility.
               </p>
               <Link href="/framework">
-                <Button variant="outline" style={{ color: '#ffffff' }}>
+                <Button variant="outline">
                   View Framework
                 </Button>
               </Link>
@@ -117,7 +117,7 @@ export default function AccommodationCalculatorPage() {
                 Navigate accommodation analysis step-by-step with real courtroom scenarios and legal guidance.
               </p>
               <Link href="/decision-tree">
-                <Button variant="outline" style={{ color: '#ffffff' }}>
+                <Button variant="outline">
                   Use Decision Tree
                 </Button>
               </Link>

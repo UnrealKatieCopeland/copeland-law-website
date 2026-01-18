@@ -271,19 +271,19 @@ export default function ExamplesOfHarm() {
                 <h3 className="text-lg font-bold mb-4">Read the Full Documentation</h3>
                 <div className="flex flex-wrap gap-4">
                   <a href="/Gordonletter.pdf" target="_blank" rel="noopener noreferrer">
-                    <Button style={{ color: '#ffffff' }}>
+                    <Button>
                       <FileText className="mr-2 h-4 w-4" />
                       DOJ/HHS Letter of Findings (PDF)
                     </Button>
                   </a>
                   <a href="/IllinoisArticle_June2015_18.pdf" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" style={{ color: '#ffffff' }}>
+                    <Button variant="outline">
                       <FileText className="mr-2 h-4 w-4" />
                       Illinois Bar Article (PDF)
                     </Button>
                   </a>
                   <a href="http://isba.org/sections/mentalhealth/newsletter/2015/06/parentdevelopmentaldisabilitydiscri" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" style={{ color: '#ffffff' }}>
+                    <Button variant="outline">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Original Article
                     </Button>
@@ -306,13 +306,13 @@ export default function ExamplesOfHarm() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/framework">
-              <Button size="lg" style={{ color: '#ffffff' }}>
+              <Button size="lg">
                 <Scale className="mr-2 h-5 w-5" />
                 View The Framework
               </Button>
             </Link>
             <Link href="/quiz">
-              <Button size="lg" variant="outline" style={{ color: '#ffffff' }}>
+              <Button size="lg" variant="outline">
                 Test Your Understanding
               </Button>
             </Link>

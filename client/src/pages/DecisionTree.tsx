@@ -134,7 +134,7 @@ export default function DecisionTree() {
                   effect-based framework for analyzing courtroom accessibility.
                 </p>
                 <Link href="/framework">
-                  <Button variant="outline" style={{color: '#ffffff'}}>
+                  <Button variant="outline">
                     View Framework
                   </Button>
                 </Link>
@@ -150,7 +150,7 @@ export default function DecisionTree() {
                   to deepen your understanding of ADA compliance.
                 </p>
                 <Link href="/quiz">
-                  <Button variant="outline" style={{color: '#ffffff'}}>
+                  <Button variant="outline">
                     Take the Quiz
                   </Button>
                 </Link>

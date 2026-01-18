@@ -62,7 +62,7 @@ export default function ArticleAdministrativePathways() {
                   size="sm" 
                   onClick={() => handleShare('twitter')}
                   aria-label="Share on Twitter"
-                  style={{ color: '#ffffff' }}
+                 
                 >
                   <Share2 className="h-4 w-4 mr-2" />
                   Twitter
@@ -72,7 +72,7 @@ export default function ArticleAdministrativePathways() {
                   size="sm" 
                   onClick={() => handleShare('linkedin')}
                   aria-label="Share on LinkedIn"
-                  style={{ color: '#ffffff' }}
+                 
                 >
                   <Share2 className="h-4 w-4 mr-2" />
                   LinkedIn
@@ -82,7 +82,7 @@ export default function ArticleAdministrativePathways() {
                   size="sm" 
                   onClick={copyLink}
                   aria-label="Copy link"
-                  style={{ color: '#ffffff' }}
+                 
                 >
                   <LinkIcon className="h-4 w-4" />
                 </Button>
@@ -357,13 +357,13 @@ export default function ArticleAdministrativePathways() {
 
                 <div className="flex flex-wrap gap-4">
                   <a href="/Administrative-Pathways-ADA-Compliance-Full-Guide.pdf" download>
-                    <Button style={{ color: '#ffffff' }}>
+                    <Button>
                       <Download className="mr-2 h-4 w-4" />
                       Download Full Guide PDF
                     </Button>
                   </a>
                   <Link href="/resources">
-                    <Button variant="outline" style={{ color: '#ffffff' }}>
+                    <Button variant="outline">
                       <FileText className="mr-2 h-4 w-4" />
                       View All Resources
                     </Button>
@@ -512,7 +512,7 @@ export default function ArticleAdministrativePathways() {
                 size="lg"
                 onClick={() => handleShare('twitter')}
                 aria-label="Share on Twitter"
-                style={{ color: '#ffffff' }}
+               
               >
                 <Share2 className="mr-2 h-5 w-5" />
                 Share on Twitter
@@ -521,7 +521,7 @@ export default function ArticleAdministrativePathways() {
                 size="lg"
                 onClick={() => handleShare('linkedin')}
                 aria-label="Share on LinkedIn"
-                style={{ color: '#ffffff' }}
+               
               >
                 <Share2 className="mr-2 h-5 w-5" />
                 Share on LinkedIn
@@ -531,7 +531,7 @@ export default function ArticleAdministrativePathways() {
                 variant="outline"
                 onClick={copyLink}
                 aria-label="Copy link"
-                style={{ color: '#ffffff' }}
+               
               >
                 <LinkIcon className="mr-2 h-5 w-5" />
                 Copy Link

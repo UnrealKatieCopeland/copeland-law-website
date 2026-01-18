@@ -50,13 +50,13 @@ export default function Framework() {
           {/* Primary Actions */}
           <div className="flex flex-wrap gap-4 mb-8">
             <a href="https://not-either-or-but-both-a-au2bjb1.gamma.site" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" style={{color: '#ffffff'}}>
+              <Button size="lg">
                 <BookOpen className="mr-2 h-5 w-5" />
                 View Full Framework
               </Button>
             </a>
             <a href="/Not-EitherOr-But-BothAnd.pdf" download>
-              <Button size="lg" variant="outline" style={{color: '#ffffff'}}>
+              <Button size="lg" variant="outline">
                 <Download className="mr-2 h-5 w-5" />
                 Download PDF
               </Button>
@@ -289,7 +289,7 @@ export default function Framework() {
                   reasoning.
                 </p>
                 <a href="https://not-either-or-but-both-a-au2bjb1.gamma.site" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" style={{color: '#ffffff'}}>
+                  <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Full Essay
                   </Button>
@@ -305,7 +305,7 @@ export default function Framework() {
                   Visual slide deck with concise cards, practical examples, and specific modifications.
                 </p>
                 <a href="https://not-eitheror-but-bothand-7lj5vn6.gamma.site" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" style={{color: '#ffffff'}}>
+                  <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Quick Reference
                   </Button>
@@ -321,7 +321,7 @@ export default function Framework() {
                   Step-by-step guidance for analyzing accommodation requests with legal outcomes and next steps.
                 </p>
                 <Link href="/decision-tree">
-                  <Button variant="outline" style={{color: '#ffffff'}}>
+                  <Button variant="outline">
                     Use Decision Tree
                   </Button>
                 </Link>
@@ -345,7 +345,7 @@ export default function Framework() {
                   </p>
                 </div>
                 <Link href="/accommodation-calculator">
-                  <Button size="lg" style={{color: '#ffffff'}}>
+                  <Button size="lg">
                     Use Calculator
                   </Button>
                 </Link>
@@ -365,7 +365,7 @@ export default function Framework() {
                   </p>
                 </div>
                 <Link href="/quiz">
-                  <Button size="lg" style={{color: '#ffffff'}}>
+                  <Button size="lg">
                     Take the Quiz
                   </Button>
                 </Link>
@@ -393,7 +393,7 @@ export default function Framework() {
                   </p>
                 </div>
                 <Link href="/examples-of-harm">
-                  <Button size="lg" variant="outline" style={{color: '#ffffff'}}>
+                  <Button size="lg" variant="outline">
                     View Examples of Harm
                   </Button>
                 </Link>
@@ -466,13 +466,13 @@ export default function Framework() {
             Help spread awareness of disability rights in courtrooms
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button onClick={() => handleShare("twitter")} variant="outline" style={{color: '#ffffff'}}>
+            <Button onClick={() => handleShare("twitter")} variant="outline">
               Share on Twitter
             </Button>
-            <Button onClick={() => handleShare("linkedin")} variant="outline" style={{color: '#ffffff'}}>
+            <Button onClick={() => handleShare("linkedin")} variant="outline">
               Share on LinkedIn
             </Button>
-            <Button onClick={() => handleShare("copy")} variant="outline" style={{color: '#ffffff'}}>
+            <Button onClick={() => handleShare("copy")} variant="outline">
               Copy Link
             </Button>
           </div>

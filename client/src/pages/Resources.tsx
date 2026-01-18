@@ -133,7 +133,7 @@ export default function Resources() {
                   
                   <div className="flex flex-col gap-3">
                     <a href="/Not-EitherOr-But-BothAnd.pdf" download aria-label="Download Not Either/Or, But Both/And PDF">
-                      <Button className="w-full" style={{color: '#ffffff'}}>
+                      <Button className="w-full">
                         <Download className="mr-2 h-4 w-4" />
                         Download PDF
                       </Button>
@@ -173,7 +173,7 @@ export default function Resources() {
                   </p>
                   
                   <a href="/cart-in-the-courtroom-model-guidelines.pdf" download aria-label="Download CART Model Guidelines PDF">
-                    <Button className="w-full" style={{color: '#ffffff'}}>
+                    <Button className="w-full">
                       <Download className="mr-2 h-4 w-4" />
                       Download PDF
                     </Button>
@@ -219,7 +219,7 @@ export default function Resources() {
                   template letter.
                 </p>
                 <Link href="/accommodation-calculator">
-                  <Button className="w-full" style={{color: '#ffffff'}}>
+                  <Button className="w-full">
                     Use Calculator
                   </Button>
                 </Link>
@@ -244,7 +244,7 @@ export default function Resources() {
                   scenarios. Answer questions and receive legal analysis with specific next steps.
                 </p>
                 <Link href="/decision-tree">
-                  <Button className="w-full" style={{color: '#ffffff'}}>
+                  <Button className="w-full">
                     Use Decision Tree
                   </Button>
                 </Link>
@@ -269,7 +269,7 @@ export default function Resources() {
                   explanations. Learn how The Copeland Questions™ apply in practice.
                 </p>
                 <Link href="/quiz">
-                  <Button className="w-full" style={{color: '#ffffff'}}>
+                  <Button className="w-full">
                     Take the Quiz
                   </Button>
                 </Link>
@@ -308,7 +308,7 @@ export default function Resources() {
                   and the legal framework for belief-neutral access analysis.
                 </p>
                 <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full" style={{color: '#ffffff'}}>
+                  <Button className="w-full">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Full Essay
                   </Button>
@@ -334,7 +334,7 @@ export default function Resources() {
                   reasonable modifications, and actionable guidance for practitioners.
                 </p>
                 <a href="https://not-eitheror-but-bothand-7lj5vn6.gamma.site" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full" style={{color: '#ffffff'}}>
+                  <Button className="w-full">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Quick Reference
                   </Button>
@@ -360,7 +360,7 @@ export default function Resources() {
                   rights law, including the heartbreaking Gordon v. Massachusetts DCF case.
                 </p>
                 <Link href="/examples-of-harm">
-                  <Button className="w-full" style={{color: '#ffffff'}}>
+                  <Button className="w-full">
                     View Case Examples
                   </Button>
                 </Link>

@@ -63,7 +63,7 @@ export default function ArticleNotEitherOr() {
                   size="sm" 
                   onClick={() => handleShare('twitter')}
                   aria-label="Share on Twitter"
-                  style={{ color: '#ffffff' }}
+                 
                 >
                   <Share2 className="h-4 w-4 mr-2" />
                   Twitter
@@ -73,7 +73,7 @@ export default function ArticleNotEitherOr() {
                   size="sm" 
                   onClick={() => handleShare('linkedin')}
                   aria-label="Share on LinkedIn"
-                  style={{ color: '#ffffff' }}
+                 
                 >
                   <Share2 className="h-4 w-4 mr-2" />
                   LinkedIn
@@ -83,7 +83,7 @@ export default function ArticleNotEitherOr() {
                   size="sm" 
                   onClick={copyLink}
                   aria-label="Copy link"
-                  style={{ color: '#ffffff' }}
+                 
                 >
                   <LinkIcon className="h-4 w-4" />
                 </Button>
@@ -242,19 +242,19 @@ export default function ArticleNotEitherOr() {
 
                 <div className="flex flex-wrap gap-4">
                   <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer">
-                    <Button style={{ color: '#ffffff' }}>
+                    <Button>
                       <BookOpen className="mr-2 h-4 w-4" />
                       View Full Essay
                     </Button>
                   </a>
                   <a href="https://not-eitheror-but-bothand-7lj5vn6.gamma.site" target="_blank" rel="noopener noreferrer">
-                    <Button style={{ color: '#ffffff' }}>
+                    <Button>
                       <FileText className="mr-2 h-4 w-4" />
                       Quick Reference Deck
                     </Button>
                   </a>
                   <a href="/Not-EitherOr-But-BothAnd.pdf" download>
-                    <Button variant="outline" style={{ color: '#ffffff' }}>
+                    <Button variant="outline">
                       <Download className="mr-2 h-4 w-4" />
                       Download PDF
                     </Button>
@@ -556,7 +556,7 @@ export default function ArticleNotEitherOr() {
                     View the full framework in an interactive, visually rich format on Gamma.
                   </p>
                   <a href="https://not-eitheror-but-bothand-vfjt07a.gamma.site" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" style={{ color: '#ffffff' }}>
+                    <Button variant="outline">
                       View on Gamma
                     </Button>
                   </a>
@@ -573,7 +573,7 @@ export default function ArticleNotEitherOr() {
                     Download the complete article as a professionally formatted PDF document.
                   </p>
                   <a href="/Not-EitherOr-But-BothAnd.pdf" download>
-                    <Button variant="outline" style={{ color: '#ffffff' }}>
+                    <Button variant="outline">
                       <Download className="mr-2 h-4 w-4" />
                       Download PDF
                     </Button>
@@ -584,7 +584,7 @@ export default function ArticleNotEitherOr() {
 
             <div className="mt-8 text-center">
               <Link href="/resources">
-                <Button size="lg" style={{ color: '#ffffff' }}>
+                <Button size="lg">
                   Explore More Resources
                 </Button>
               </Link>

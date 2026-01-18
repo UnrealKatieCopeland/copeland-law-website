@@ -42,12 +42,12 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-4">
             <Link href="/quiz">
-              <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
+              <Button size="lg" className="text-accent-font">
                 Take the 10-Question Quiz
               </Button>
             </Link>
             <Link href="/framework">
-              <Button size="lg" variant="outline" className="text-accent-font bg-white/10 hover:bg-white/20 border-white/30" style={{color: '#ffffff'}}>
+              <Button size="lg" variant="outline" className="text-accent-font bg-white/10 hover:bg-white/20 border-white/30">
                 Explore The Framework
               </Button>
             </Link>
@@ -78,7 +78,7 @@ export default function Home() {
                   Test your knowledge with 10 real courtroom scenarios. Can you spot the ADA violations?
                 </p>
                 <Link href="/quiz">
-                  <Button className="w-full text-accent-font" style={{color: '#ffffff'}}>
+                  <Button className="w-full text-accent-font">
                     Start Quiz →
                   </Button>
                 </Link>
@@ -96,7 +96,7 @@ export default function Home() {
                   Answer 3 questions and receive personalized accommodation recommendations with legal citations.
                 </p>
                 <Link href="/accommodation-calculator">
-                  <Button className="w-full text-accent-font" style={{color: '#ffffff'}}>
+                  <Button className="w-full text-accent-font">
                     Try Calculator →
                   </Button>
                 </Link>
@@ -114,7 +114,7 @@ export default function Home() {
                   Navigate the accommodation process with an interactive decision tree tailored to your situation.
                 </p>
                 <Link href="/decision-tree">
-                  <Button className="w-full text-accent-font" style={{color: '#ffffff'}}>
+                  <Button className="w-full text-accent-font">
                     Explore Tool →
                   </Button>
                 </Link>
@@ -224,7 +224,7 @@ export default function Home() {
                 © 2026 Kathryn Copeland. All Rights Reserved.
               </p>
               <Link href="/resources">
-                <Button className="text-accent-font w-fit" style={{color: '#ffffff'}}>
+                <Button className="text-accent-font w-fit">
                   Learn About the Framework
                 </Button>
               </Link>
@@ -287,7 +287,7 @@ export default function Home() {
               barriers in the legal system.
             </p>
             <Link href="/about">
-              <Button size="lg" className="text-accent-font" style={{color: '#ffffff'}}>
+              <Button size="lg" className="text-accent-font">
                 Read Full Background
               </Button>
             </Link>

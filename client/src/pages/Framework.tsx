@@ -380,6 +380,80 @@ export default function Framework() {
         </div>
       </section>
 
+      {/* Legal Consequences */}
+      <section className="py-16 bg-card">
+        <div className="container-reading">
+          <h2 className="mb-8">Legal Consequences of ADA Denials</h2>
+          
+          <p className="text-lg text-foreground/70 leading-relaxed mb-8">
+            When courts fail to provide required ADA accommodations, the legal consequences extend 
+            far beyond simple procedural error. Emerging legal theories suggest that orders issued 
+            without accommodations may face serious challenges.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-amber-200 bg-amber-50/50">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <AlertCircle className="h-8 w-8 text-amber-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-4">Void Order Doctrine</h3>
+                    <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                      There is an emerging legal argument that orders issued without required ADA 
+                      accommodations <strong>may be void</strong> (not merely voidable) due to lack of 
+                      subject matter jurisdiction.
+                    </p>
+                    <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                      Under <em>Bridgman v. Moore</em>, 185 S.W.3d 1, 5 (Tex. App.—San Antonio 2005), 
+                      Texas courts have a <strong>duty</strong> to vacate void orders at any time, with 
+                      or without a motion. This duty is not discretionary.
+                    </p>
+                    <p className="text-sm text-foreground/70 italic">
+                      If this argument prevails in future appellate decisions, orders issued after 
+                      accommodation denials could be subject to collateral attack—even years later.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-amber-200 bg-amber-50/50">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4">
+                  <Scale className="h-8 w-8 text-amber-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-4">State-Created Danger</h3>
+                    <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                      Under the Fourteenth Amendment's state-created danger doctrine, government actors 
+                      (including courts) may be liable when they <strong>affirmatively place individuals 
+                      in danger</strong> or render them more vulnerable to harm.
+                    </p>
+                    <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                      When a court denies an accommodation and then enforces orders issued without that 
+                      accommodation, the court may create a "functional custody" situation where the 
+                      disabled party is trapped in a harmful legal status they cannot escape.
+                    </p>
+                    <p className="text-sm text-foreground/70 italic">
+                      This creates potential civil rights liability under 42 U.S.C. § 1983 when 
+                      accommodation denials lead to documented harm.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 p-6 bg-primary/5 border-l-4 border-primary rounded-r">
+            <p className="text-base text-foreground/70 leading-relaxed">
+              <strong>Note:</strong> These legal theories are evolving areas of law and may not be 
+              recognized in all jurisdictions. However, they represent serious potential consequences 
+              that courts should consider when evaluating accommodation requests. The safest course 
+              is to provide required accommodations rather than risk later challenges to orders.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Examples of Harm */}
       <section className="py-16 bg-background">
         <div className="container-reading">

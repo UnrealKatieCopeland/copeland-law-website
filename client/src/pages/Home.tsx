@@ -215,7 +215,7 @@ export default function Home() {
             </div>
             <div>
               <p className="text-accent-font text-primary mb-4">Featured Framework</p>
-              <h2 className="mb-6">The Copeland Questions™</h2>
+              <h2 className="mb-6">The Copeland Questions</h2>
               <p className="text-lg text-foreground/70 leading-relaxed mb-6">
                 A strategic framework for identifying and addressing systemic accessibility 
                 barriers in judicial proceedings. Inspired by landmark civil rights advocacy, 

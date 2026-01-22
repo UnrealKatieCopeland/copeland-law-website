@@ -5,7 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle, Calculator, GitBranch, HelpCircle } from "lucide-react";
+import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle, Calculator, GitBranch, HelpCircle, Users } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Resources() {
@@ -289,7 +289,7 @@ export default function Resources() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-start gap-3">
@@ -362,6 +362,31 @@ export default function Resources() {
                 <Link href="/examples-of-harm">
                   <Button className="w-full">
                     View Case Examples
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-primary/30">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <Users className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">For Opposing Counsel</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Professional guidance on ADA obligations
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  Respectful educational guide explaining what opposing counsel can and cannot 
+                  do when an accommodation request is filed, with legal risks and best practices.
+                </p>
+                <Link href="/for-opposing-counsel">
+                  <Button className="w-full">
+                    View Guide
                   </Button>
                 </Link>
               </CardContent>

@@ -227,6 +227,10 @@ export default function ArticleNotEitherOr() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1">•</span>
+                    <span>Helps courts fulfill their duty to vacate void orders under <em>Bridgman v. Moore</em></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">•</span>
                     <span>Maintains procedural fairness without lowering substantive standards</span>
                   </li>
                   <li className="flex items-start gap-3">

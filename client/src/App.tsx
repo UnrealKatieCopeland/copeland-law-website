@@ -19,6 +19,7 @@ import DecisionTree from "./pages/DecisionTree";
 import ExamplesOfHarm from "./pages/ExamplesOfHarm";
 import AccommodationCalculatorPage from "./pages/AccommodationCalculatorPage";
 import ToolsHub from "./pages/ToolsHub";
+import ForOpposingCounsel from "./pages/ForOpposingCounsel";
 import Contact from "./pages/Contact";
 
 function Router() {
@@ -36,6 +37,7 @@ function Router() {
       <Route path={"/decision-tree"} component={DecisionTree} />
       <Route path={"/examples-of-harm"} component={ExamplesOfHarm} />
       <Route path={"/accommodation-calculator"} component={AccommodationCalculatorPage} />
+      <Route path={"/for-opposing-counsel"} component={ForOpposingCounsel} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

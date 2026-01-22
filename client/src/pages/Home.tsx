@@ -80,7 +80,7 @@ export default function Home() {
                   Test your knowledge with 10 real courtroom scenarios. Can you spot the ADA violations?
                 </p>
                 <Link href="/quiz">
-                  <Button className="w-full text-accent-font">
+                  <Button className="w-full text-white">
                     Start Quiz →
                   </Button>
                 </Link>
@@ -98,7 +98,7 @@ export default function Home() {
                   Answer 3 questions and receive personalized accommodation recommendations with legal citations.
                 </p>
                 <Link href="/accommodation-calculator">
-                  <Button className="w-full text-accent-font">
+                  <Button className="w-full text-white">
                     Try Calculator →
                   </Button>
                 </Link>
@@ -116,7 +116,7 @@ export default function Home() {
                   Navigate the accommodation process with an interactive decision tree tailored to your situation.
                 </p>
                 <Link href="/decision-tree">
-                  <Button className="w-full text-accent-font">
+                  <Button className="w-full text-white">
                     Explore Tool →
                   </Button>
                 </Link>
@@ -226,7 +226,7 @@ export default function Home() {
                 © 2026 Kathryn Copeland. All Rights Reserved.
               </p>
               <Link href="/resources">
-                <Button className="text-accent-font w-fit">
+                <Button className="text-white w-fit">
                   Learn About the Framework
                 </Button>
               </Link>
@@ -289,7 +289,7 @@ export default function Home() {
               barriers in the legal system.
             </p>
             <Link href="/about">
-              <Button size="lg" className="text-accent-font">
+              <Button size="lg" className="text-white">
                 Read Full Background
               </Button>
             </Link>

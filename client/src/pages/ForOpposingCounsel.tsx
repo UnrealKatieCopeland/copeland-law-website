@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle2, XCircle, AlertTriangle, BookOpen, Scale, FileText } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
+import { ShareResource } from '@/components/ShareResource';
 
 export default function ForOpposingCounsel() {
   return (
@@ -553,10 +554,20 @@ export default function ForOpposingCounsel() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-16 bg-primary/5">
+              {/* Share Section */}
+        <section className="py-16 bg-background">
+          <div className="container-reading">
+            <ShareResource
+              title="For Opposing Counsel: ADA Accommodation Guidance"
+              description="Professional guidance for attorneys on responding to ADA accommodation requests in judicial proceedings. Learn about legal obligations, ethical considerations, and strategic responses that protect your client while respecting disability rights."
+            />
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-16 bg-card">
           <div className="container-reading text-center">
-            <h2 className="mb-6">Learn More About ADA Compliance</h2>
+            <h2 className="mb-6">Continue Learning</h2>
             <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
               Explore The Copeland Questions framework and interactive tools to deepen your understanding 
               of ADA Title II obligations in judicial proceedings.

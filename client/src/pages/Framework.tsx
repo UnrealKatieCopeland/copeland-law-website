@@ -7,22 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Scale, FileText, BookOpen, Download, Users, Target, AlertCircle, ExternalLink, GitBranch, Calculator } from "lucide-react";
 import { Link } from "wouter";
-import { toast } from "sonner";
+import { ShareResource } from "@/components/ShareResource";
 
 export default function Framework() {
-  const handleShare = (platform: string) => {
-    const url = window.location.href;
-    const text = "The Copeland Questions™: A framework for analyzing courtroom accessibility without credibility contests or diagnostic gatekeeping.";
-    
-    if (platform === "twitter") {
-      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank");
-    } else if (platform === "linkedin") {
-      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank");
-    } else if (platform === "copy") {
-      navigator.clipboard.writeText(url);
-      toast.success("Link copied to clipboard!");
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -547,24 +534,13 @@ export default function Framework() {
         </div>
       </section>
 
-      {/* Social Sharing */}
+       {/* Share Section */}
       <section className="py-16 bg-background">
-        <div className="container-reading text-center">
-          <h2 className="mb-6">Share This Framework</h2>
-          <p className="text-lg text-foreground/70 mb-8">
-            Help spread awareness of disability rights in courtrooms
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button onClick={() => handleShare("twitter")} variant="outline">
-              Share on Twitter
-            </Button>
-            <Button onClick={() => handleShare("linkedin")} variant="outline">
-              Share on LinkedIn
-            </Button>
-            <Button onClick={() => handleShare("copy")} variant="outline">
-              Copy Link
-            </Button>
-          </div>
+        <div className="container-reading">
+          <ShareResource
+            title="The Copeland Questions™: ADA Compliance Framework"
+            description="A belief-neutral, effect-based framework for analyzing courtroom accessibility without credibility contests or diagnostic gatekeeping. Essential reading for judges, attorneys, and court administrators."
+          />
         </div>
       </section>
     </div>

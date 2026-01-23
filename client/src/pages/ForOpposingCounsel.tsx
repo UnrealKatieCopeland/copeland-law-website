@@ -149,8 +149,13 @@ export default function ForOpposingCounsel() {
           <div className="container-reading">
             <div className="flex items-center gap-3 mb-8">
               <XCircle className="h-8 w-8 text-red-600" />
-              <h2 className="mb-0">What Opposing Counsel CANNOT Do</h2>
+              <h2 className="mb-0">What Opposing Counsel Should Not Do</h2>
             </div>
+            
+            <p className="text-base leading-relaxed text-foreground/70 mb-8">
+              While opposing counsel can procedurally file any response they choose, the following actions 
+              create significant legal and ethical risks with little to no strategic benefit.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-red-200 bg-red-50/50">
@@ -160,8 +165,10 @@ export default function ForOpposingCounsel() {
                     Oppose the Request
                   </h3>
                   <p className="text-base leading-relaxed text-foreground/80">
-                    You cannot file a response opposing the accommodation request. The ADA does not give 
-                    private parties standing to challenge another party's disability status or need for accommodation.
+                    Filing a response opposing the accommodation request creates legal risk because the ADA does not give 
+                    private parties standing to challenge another party's disability status or need for accommodation. 
+                    Such opposition may expose your client to ADA Title II liability and raise ethical concerns under 
+                    professional conduct rules.
                   </p>
                 </CardContent>
               </Card>
@@ -173,8 +180,9 @@ export default function ForOpposingCounsel() {
                     Challenge Medical Necessity
                   </h3>
                   <p className="text-base leading-relaxed text-foreground/80">
-                    You cannot question whether the requesting party is "really" disabled or whether they 
-                    "really need" the accommodation. This is between the party and the court.
+                    Questioning whether the requesting party is "really" disabled or whether they "really need" 
+                    the accommodation creates legal risk. The ADA prohibits disability-based inquiry by private parties. 
+                    This determination is between the party and the court.
                   </p>
                 </CardContent>
               </Card>
@@ -186,8 +194,9 @@ export default function ForOpposingCounsel() {
                     Require Additional Documentation
                   </h3>
                   <p className="text-base leading-relaxed text-foreground/80">
-                    You cannot demand medical records, doctor's notes, or additional proof of disability. 
-                    The court determines what documentation is sufficient.
+                    Demanding medical records, doctor's notes, or additional proof of disability may violate the ADA's 
+                    prohibition on disability-based inquiry by private parties. The court—not opposing counsel—determines 
+                    what documentation is sufficient.
                   </p>
                 </CardContent>
               </Card>
@@ -199,8 +208,9 @@ export default function ForOpposingCounsel() {
                     Argue Your Client's Preferences
                   </h3>
                   <p className="text-base leading-relaxed text-foreground/80">
-                    Your client's preference for a different format, timing, or procedure does not override 
-                    the ADA obligation. Private party convenience is not a defense to discrimination.
+                    Arguing that your client prefers a different format, timing, or procedure is legally insufficient 
+                    because private party convenience is not a defense to ADA discrimination claims. Such arguments may 
+                    expose your client to liability without providing any strategic benefit.
                   </p>
                 </CardContent>
               </Card>
@@ -212,9 +222,10 @@ export default function ForOpposingCounsel() {
                 <div>
                   <p className="font-semibold text-red-900 mb-2">Critical Point</p>
                   <p className="text-base leading-relaxed text-red-900">
-                    Filing a response that opposes an ADA accommodation request may create legal liability 
-                    for your client and ethical concerns for you as counsel. The safer course is to let 
-                    the court handle the accommodation determination without opposition.
+                    While you can procedurally file any response you choose, opposing an ADA accommodation request 
+                    creates significant legal risk for your client (potential ADA Title II liability) and ethical risk 
+                    for you as counsel (professional conduct violations). The safer and more strategic course is to 
+                    let the court handle the accommodation determination without opposition.
                   </p>
                 </div>
               </div>
@@ -343,20 +354,22 @@ export default function ForOpposingCounsel() {
                     <div>
                       <h3 className="text-xl font-semibold mb-4">Void Order Doctrine</h3>
                       <p className="text-base leading-relaxed text-foreground/80 mb-4">
-                        There is an emerging legal argument that <strong>orders issued without required ADA 
-                        accommodations may be void</strong> (not merely voidable) due to lack of subject matter 
-                        jurisdiction. Under <em>Bridgman v. Moore</em>, 185 S.W.3d 1, 5 (Tex. App.—San Antonio 
-                        2005), Texas courts have a <strong>duty</strong> to vacate void orders at any time, 
-                        with or without a motion.
+                        Under Texas law, a trial court abuses its discretion as a matter of law when it refuses 
+                        to vacate a void order. <em>In re Dickason</em>, 987 S.W.2d 570, 571 (Tex. 1998). A void 
+                        order is a "nullity" from its inception and confers no rights. <em>Ex parte Shaffer</em>, 
+                        649 S.W.2d 300, 301 (Tex. 1983).
                       </p>
                       <p className="text-base leading-relaxed text-foreground/80 mb-4">
-                        If this argument prevails in future appellate decisions, any orders issued after 
-                        an accommodation request was denied or opposed could be subject to collateral attack—even 
-                        years later. This creates significant litigation risk for all parties.
+                        <strong>Emerging argument currently in appellate litigation:</strong> Orders issued without 
+                        required ADA accommodations may be void (not merely voidable) because the disabled party was 
+                        denied the constitutional right to be "present" and "heard." If this argument prevails, any 
+                        orders issued after an accommodation request was denied or opposed could be subject to collateral 
+                        attack—even years later.
                       </p>
                       <p className="text-base leading-relaxed text-foreground/80">
-                        <strong>Practical implication:</strong> Opposing an accommodation request may result 
-                        in orders that are later vacated, requiring re-litigation of the entire matter.
+                        <strong>Practical implication:</strong> Opposing an accommodation request may result in orders 
+                        that are later vacated under the mandatory duty to vacate void orders, requiring re-litigation 
+                        of the entire matter.
                       </p>
                     </div>
                   </div>
@@ -372,19 +385,19 @@ export default function ForOpposingCounsel() {
                       <p className="text-base leading-relaxed text-foreground/80 mb-4">
                         Under the Fourteenth Amendment's state-created danger doctrine, government actors 
                         (including courts) may be liable when they <strong>affirmatively place individuals 
-                        in danger</strong> or render them more vulnerable to harm. <em>See DeShaney v. Winnebago 
-                        County Dep't of Soc. Servs.</em>, 489 U.S. 189 (1989).
+                        in danger</strong> or render them more vulnerable to harm. <em>DeShaney v. Winnebago 
+                        County</em>, 489 U.S. 189 (1989).
                       </p>
                       <p className="text-base leading-relaxed text-foreground/80 mb-4">
-                        When a court denies an accommodation and then enforces orders issued without that 
-                        accommodation, the court may create a "functional custody" situation where the disabled 
-                        party is trapped in a harmful legal status they cannot escape without the very 
-                        accommodations that were denied.
+                        <strong>Emerging argument currently in civil rights litigation:</strong> When a court denies 
+                        an accommodation and then enforces orders issued without that accommodation, it may create a 
+                        "functional custody" situation where the disabled party is trapped in a harmful legal status 
+                        they cannot escape without the very accommodations that were denied.
                       </p>
                       <p className="text-base leading-relaxed text-foreground/80">
-                        <strong>Practical implication:</strong> If opposing counsel's actions contribute to 
-                        the denial of accommodations, and that denial leads to documented harm, there may be 
-                        civil rights liability under 42 U.S.C. § 1983.
+                        <strong>Practical implication:</strong> If this theory is recognized by courts, and if opposing 
+                        counsel's actions contribute to the denial of accommodations that leads to documented harm, there 
+                        may be civil rights liability under 42 U.S.C. § 1983. This theory is being tested in active litigation.
                       </p>
                     </div>
                   </div>

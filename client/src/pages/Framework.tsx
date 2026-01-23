@@ -399,18 +399,25 @@ export default function Framework() {
                   <div>
                     <h3 className="text-xl font-bold mb-4">Void Order Doctrine</h3>
                     <p className="text-base text-foreground/80 leading-relaxed mb-4">
-                      There is an emerging legal argument that orders issued without required ADA 
-                      accommodations <strong>may be void</strong> (not merely voidable) due to lack of 
-                      subject matter jurisdiction.
+                      Under Texas law, a trial court <strong>abuses its discretion as a matter of law</strong> when 
+                      it refuses to vacate a void order. <em>In re Dickason</em>, 987 S.W.2d 570, 571 (Tex. 1998). 
+                      Unlike voidable orders (which are valid until appealed), a void order is a "nullity" from its 
+                      inception and confers no rights. <em>Ex parte Shaffer</em>, 649 S.W.2d 300, 301 (Tex. 1983).
                     </p>
                     <p className="text-base text-foreground/80 leading-relaxed mb-4">
-                      Under <em>Bridgman v. Moore</em>, 185 S.W.3d 1, 5 (Tex. App.—San Antonio 2005), 
-                      Texas courts have a <strong>duty</strong> to vacate void orders at any time, with 
-                      or without a motion. This duty is not discretionary.
+                      <strong>Emerging Argument:</strong> There is a developing legal theory—currently being advanced 
+                      in appellate litigation—that orders issued without required ADA accommodations may be void 
+                      (not merely voidable) because the disabled party was denied the constitutional right to be 
+                      "present" and "heard." <em>Peralta v. Heights Med. Ctr., Inc.</em>, 485 U.S. 80 (1988).
+                    </p>
+                    <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                      If this argument prevails, courts would have a <strong>mandatory, ministerial duty</strong> to 
+                      vacate such orders at any time, with or without a motion. <em>Bridgman v. Moore</em>, 185 S.W.3d 1, 5 
+                      (Tex. App.—San Antonio 2005).
                     </p>
                     <p className="text-sm text-foreground/70 italic">
-                      If this argument prevails in future appellate decisions, orders issued after 
-                      accommodation denials could be subject to collateral attack—even years later.
+                      This theory is being tested in active appeals. If recognized by appellate courts, orders issued 
+                      after accommodation denials could be subject to collateral attack—even years later.
                     </p>
                   </div>
                 </div>
@@ -426,16 +433,18 @@ export default function Framework() {
                     <p className="text-base text-foreground/80 leading-relaxed mb-4">
                       Under the Fourteenth Amendment's state-created danger doctrine, government actors 
                       (including courts) may be liable when they <strong>affirmatively place individuals 
-                      in danger</strong> or render them more vulnerable to harm.
+                      in danger</strong> or render them more vulnerable to harm. <em>DeShaney v. Winnebago County</em>, 
+                      489 U.S. 189 (1989).
                     </p>
                     <p className="text-base text-foreground/80 leading-relaxed mb-4">
-                      When a court denies an accommodation and then enforces orders issued without that 
-                      accommodation, the court may create a "functional custody" situation where the 
+                      <strong>Emerging Argument:</strong> There is a developing legal theory—currently being advanced 
+                      in civil rights litigation—that when a court denies an accommodation and then enforces orders 
+                      issued without that accommodation, it may create a "functional custody" situation where the 
                       disabled party is trapped in a harmful legal status they cannot escape.
                     </p>
                     <p className="text-sm text-foreground/70 italic">
-                      This creates potential civil rights liability under 42 U.S.C. § 1983 when 
-                      accommodation denials lead to documented harm.
+                      If this argument is recognized, it could create civil rights liability under 42 U.S.C. § 1983 
+                      when accommodation denials lead to documented harm. This theory is being tested in active litigation.
                     </p>
                   </div>
                 </div>
@@ -445,10 +454,10 @@ export default function Framework() {
 
           <div className="mt-8 p-6 bg-primary/5 border-l-4 border-primary rounded-r">
             <p className="text-base text-foreground/70 leading-relaxed">
-              <strong>Note:</strong> These legal theories are evolving areas of law and may not be 
-              recognized in all jurisdictions. However, they represent serious potential consequences 
-              that courts should consider when evaluating accommodation requests. The safest course 
-              is to provide required accommodations rather than risk later challenges to orders.
+              <strong>Note:</strong> These legal theories are currently being advanced in active appellate 
+              and civil rights litigation. While not yet recognized by all courts, they represent serious 
+              potential consequences that courts should consider when evaluating accommodation requests. 
+              The safest course is to provide required accommodations rather than risk later challenges to orders.
             </p>
           </div>
         </div>

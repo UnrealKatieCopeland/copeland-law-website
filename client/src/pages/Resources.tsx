@@ -5,7 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle, Calculator, GitBranch, HelpCircle, Users } from "lucide-react";
+import { FileText, Download, BookOpen, Scale, CheckCircle, Lock, ExternalLink, AlertTriangle, Calculator, GitBranch, HelpCircle, Users, Building2 } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Resources() {
@@ -289,7 +289,7 @@ export default function Resources() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-start gap-3">
@@ -389,6 +389,35 @@ export default function Resources() {
                     View Guide
                   </Button>
                 </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-amber-200 bg-amber-50/30">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <FileText className="h-6 w-6 text-amber-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl mb-2">Courts Can Improve Access</h3>
+                    <p className="text-sm text-foreground/60 font-normal">
+                      Research on barriers and solutions
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/70 mb-4 leading-relaxed">
+                  Research from The Pew Charitable Trusts identifying systemic barriers to court 
+                  access for people with disabilities and evidence-based solutions.
+                </p>
+                <p className="text-xs text-foreground/60 mb-6 italic">
+                  Featured in training by Julie D. Ballinger, Southwest ADA Center
+                </p>
+                <a href="/Courts-Can-Improve-Access-Pew.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full" variant="outline">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download PDF
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </div>

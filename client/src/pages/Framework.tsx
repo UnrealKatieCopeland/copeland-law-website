@@ -327,6 +327,7 @@ export default function Framework() {
                 </p>
                 <Link href="/decision-tree">
                   <Button variant="outline">
+                    <ExternalLink className="mr-2 h-4 w-4" />
                     Use Decision Tree
                   </Button>
                 </Link>

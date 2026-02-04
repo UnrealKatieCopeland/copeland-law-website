@@ -21,6 +21,7 @@ export default function Header() {
     { label: "Tools", path: "/tools" },
     { label: "Resources", path: "/resources" },
     { label: "Articles", path: "/articles" },
+    { label: "Publications", path: "/publications" },
     { label: "Contact", path: "/contact" },
   ];
 

@@ -17,6 +17,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     { label: "Framework", path: "/framework" },
     { label: "Resources", path: "/resources" },
     { label: "Articles", path: "/articles" },
+    { label: "Publications", path: "/publications" },
     { label: "Contact", path: "/contact" },
   ];
 

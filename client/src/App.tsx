@@ -21,6 +21,7 @@ import AccommodationCalculatorPage from "./pages/AccommodationCalculatorPage";
 import ToolsHub from "./pages/ToolsHub";
 import ForOpposingCounsel from "./pages/ForOpposingCounsel";
 import CognitiveProsthetic from "./pages/CognitiveProsthetic";
+import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
 
 function Router() {
@@ -40,6 +41,7 @@ function Router() {
       <Route path={"/accommodation-calculator"} component={AccommodationCalculatorPage} />
       <Route path={"/for-opposing-counsel"} component={ForOpposingCounsel} />
       <Route path={"/cognitive-prosthetic"} component={CognitiveProsthetic} />
+      <Route path="/publications" component={Publications} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

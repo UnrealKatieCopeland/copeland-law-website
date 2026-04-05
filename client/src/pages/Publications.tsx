@@ -1,6 +1,90 @@
+import { useState } from 'react';
 import { Link } from 'wouter';
-import { FileText, ExternalLink, Clock, CheckCircle2, BookOpen, Landmark } from 'lucide-react';
+import { FileText, ExternalLink, Clock, CheckCircle2, BookOpen, Landmark, Quote, Copy, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+const citations = [
+  {
+    id: 'aba-2026',
+    title: 'Access Is Not Advantage (ABA, 2026)',
+    apa: 'Copeland, K. M. (2026, April 2). Access is not advantage: Structural integrity and disability accommodation in state courts. American Bar Association, Commission on Disability Rights. https://www.americanbar.org/groups/diversity/disabilityrights/news/structural-integrity-disability-accommodation-state-courts/',
+    bluebook: 'Kathryn "Katie" Copeland, Access Is Not Advantage: Structural Integrity and Disability Accommodation in State Courts, Am. Bar Ass\'n Comm\'n on Disability Rts. (Apr. 2, 2026), https://www.americanbar.org/groups/diversity/disabilityrights/news/structural-integrity-disability-accommodation-state-courts/.'
+  },
+  {
+    id: 'ssrn-doctrine',
+    title: 'The Cognitive Prosthetic Doctrine (SSRN, 2026)',
+    apa: 'Copeland, K. M. (2026, March). The cognitive prosthetic doctrine: Reconceiving ADA accommodation denials as structural due process violations in family court proceedings [Preprint]. Social Science Research Network. https://ssrn.com/abstract=6469802',
+    bluebook: 'Kathryn Marie Copeland, The Cognitive Prosthetic Doctrine: Reconceiving ADA Accommodation Denials as Structural Due Process Violations in Family Court Proceedings (Mar. 2026) (SSRN preprint), https://ssrn.com/abstract=6469802.'
+  },
+  {
+    id: 'ssrn-ai',
+    title: 'AI as a Civil Right (SSRN, 2026)',
+    apa: 'Copeland, K. M. (2026, April). AI as a civil right: The cognitive prosthetic [Preprint]. Social Science Research Network. https://ssrn.com',
+    bluebook: 'Kathryn Marie Copeland, AI as a Civil Right: The Cognitive Prosthetic (Apr. 2026) (SSRN preprint), https://ssrn.com.'
+  },
+  {
+    id: 'fcaa',
+    title: 'The Family Court Access Act of 2026 (SSRN, 2026)',
+    apa: 'Copeland, K. M. (2026, April). The Family Court Access Act of 2026: A model federal statute requiring ADA coordinators in family courts receiving federal child welfare funding [Legislative proposal]. Social Science Research Network. https://ssrn.com',
+    bluebook: 'Kathryn Marie Copeland, The Family Court Access Act of 2026: A Model Federal Statute Requiring ADA Coordinators in Family Courts Receiving Federal Child Welfare Funding (Apr. 2026) (SSRN legislative proposal), https://ssrn.com.'
+  }
+];
+
+function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
+    <button
+      onClick={handleCopy}
+      className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-teal-700 transition-colors px-2 py-1 rounded hover:bg-teal-50"
+      aria-label="Copy citation"
+    >
+      {copied ? <Check className="h-3.5 w-3.5 text-teal-600" /> : <Copy className="h-3.5 w-3.5" />}
+      {copied ? 'Copied' : 'Copy'}
+    </button>
+  );
+}
+
+function CitationCard({ citation }: { citation: typeof citations[0] }) {
+  const [format, setFormat] = useState<'apa' | 'bluebook'>('bluebook');
+  return (
+    <div className="bg-white border border-slate-200 rounded-lg p-6">
+      <h3 className="text-base font-semibold text-slate-900 mb-4">{citation.title}</h3>
+      <div className="flex gap-2 mb-3">
+        <button
+          onClick={() => setFormat('bluebook')}
+          className={`text-xs font-medium px-3 py-1 rounded-full border transition-colors ${
+            format === 'bluebook'
+              ? 'bg-teal-700 text-white border-teal-700'
+              : 'bg-white text-slate-600 border-slate-300 hover:border-teal-400'
+          }`}
+        >
+          Bluebook
+        </button>
+        <button
+          onClick={() => setFormat('apa')}
+          className={`text-xs font-medium px-3 py-1 rounded-full border transition-colors ${
+            format === 'apa'
+              ? 'bg-teal-700 text-white border-teal-700'
+              : 'bg-white text-slate-600 border-slate-300 hover:border-teal-400'
+          }`}
+        >
+          APA 7th
+        </button>
+      </div>
+      <div className="bg-slate-50 rounded p-4 flex items-start justify-between gap-3">
+        <p className="text-sm text-slate-700 font-mono leading-relaxed flex-1">
+          {format === 'bluebook' ? citation.bluebook : citation.apa}
+        </p>
+        <CopyButton text={format === 'bluebook' ? citation.bluebook : citation.apa} />
+      </div>
+    </div>
+  );
+}
 
 export default function Publications() {
   return (
@@ -277,6 +361,22 @@ export default function Publications() {
                 Request Speaking Engagement
               </Button>
             </Link>
+          </div>
+        </section>
+
+        {/* Cite This Work */}
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-3">
+            <Quote className="h-8 w-8 text-teal-600" />
+            <h2 className="text-3xl font-serif text-slate-900">Cite This Work</h2>
+          </div>
+          <p className="text-slate-600 mb-8 max-w-2xl">
+            Toggle between Bluebook and APA 7th edition formats. Click Copy to copy the citation to your clipboard.
+          </p>
+          <div className="grid gap-6">
+            {citations.map(c => (
+              <CitationCard key={c.id} citation={c} />
+            ))}
           </div>
         </section>
 

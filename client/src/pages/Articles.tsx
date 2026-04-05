@@ -149,54 +149,14 @@ export default function Articles() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
-      <section className="py-16 bg-background">
-        <div className="container">
-          <h2 className="text-3xl font-display font-bold mb-12">More Articles Coming Soon</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Placeholder Article 1 */}
-            <Card>
-              <CardContent className="p-8">
-                <BookOpen className="h-12 w-12 text-primary mb-6" />
-                <h3 className="font-display text-xl font-bold mb-3">
-                  The Copeland Questions™: A Practical Guide
-                </h3>
-                <p className="text-base text-muted-foreground mb-6">
-                  Step-by-step guidance for applying the framework in real courtroom scenarios.
-                </p>
-                <p className="text-sm text-primary font-medium">Coming Soon</p>
-              </CardContent>
-            </Card>
-
-            {/* Placeholder Article 2 */}
-            <Card>
-              <CardContent className="p-8">
-                <Scale className="h-12 w-12 text-primary mb-6" />
-                <h3 className="font-display text-xl font-bold mb-3">
-                  CART as the Rule, Not the Exception
-                </h3>
-                <p className="text-base text-muted-foreground mb-6">
-                  Why courts already know how to do belief-neutral access analysis—they just don't always recognize it.
-                </p>
-                <p className="text-sm text-primary font-medium">Coming Soon</p>
-              </CardContent>
-            </Card>
-
-            {/* Placeholder Article 3 */}
-            <Card>
-              <CardContent className="p-8">
-                <FileText className="h-12 w-12 text-primary mb-6" />
-                <h3 className="font-display text-xl font-bold mb-3">
-                  Effect, Not Intent: The Doctrinal Bridge
-                </h3>
-                <p className="text-base text-muted-foreground mb-6">
-                  Understanding why disability access analysis differs from Equal Protection doctrine.
-                </p>
-                <p className="text-sm text-primary font-medium">Coming Soon</p>
-              </CardContent>
-            </Card>
-          </div>
+      {/* More Scholarship Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container max-w-3xl text-center">
+          <p className="text-sm text-primary font-semibold tracking-wide uppercase mb-4">Scholarship in Progress</p>
+          <h2 className="text-2xl font-display font-bold mb-4">More Articles Forthcoming</h2>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            Additional scholarship on CART as a model for cognitive accommodation, the doctrinal distinction between effect and intent in disability access analysis, and a practical guide to applying The Copeland Questions™ in real proceedings is in development. Subscribe or check back for updates.
+          </p>
         </div>
       </section>
 

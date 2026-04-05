@@ -50,7 +50,7 @@ export default function ArticleDetail() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <a href="/not-eitheror-but-bothand.pdf" download>
+              <a href="/Not-EitherOr-But-BothAnd.pdf" download>
                 <Button>
                   <Download className="mr-2 h-4 w-4" />
                   Download PDF

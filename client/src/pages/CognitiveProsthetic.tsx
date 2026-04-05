@@ -105,8 +105,8 @@ export default function CognitiveProsthetic() {
                 The Copeland Questions™
               </Link>
               {' '}and{' '}
-              <Link href="/access-before-evaluation" className="text-teal-700 hover:text-teal-800 underline">
-                Access Before Evaluation
+              <Link href="/articles" className="text-teal-700 hover:text-teal-800 underline">
+                Articles &amp; Scholarship
               </Link>.
             </p>
           </div>

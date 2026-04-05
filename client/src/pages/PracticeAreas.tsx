@@ -11,7 +11,7 @@ export default function PracticeAreas() {
     {
       icon: Heart,
       title: "Family Law",
-      image: "/images/advocacy-hands.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/advocacy-hands_6f44682e.png",
       description: "Compassionate legal guidance through life's most challenging family transitions.",
       details: [
         "Divorce and separation proceedings",
@@ -26,7 +26,7 @@ export default function PracticeAreas() {
     {
       icon: Users,
       title: "Disability Advocacy",
-      image: "/images/accessibility-focus.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/accessibility-focus_bb3633a8.png",
       description: "Dedicated representation for individuals with disabilities navigating legal challenges.",
       details: [
         "Disability rights enforcement",
@@ -41,7 +41,7 @@ export default function PracticeAreas() {
     {
       icon: Scale,
       title: "ADA Title II Compliance in Courtrooms",
-      image: "/images/legal-research.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/legal-research_9ebdffdd.png",
       description: "Pioneering work ensuring courtrooms meet their legal obligations for accessibility.",
       details: [
         "Courtroom accessibility audits",
@@ -56,7 +56,7 @@ export default function PracticeAreas() {
     {
       icon: FileText,
       title: "Personal Injury & Torts",
-      image: "/images/scales-abstract.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/scales-abstract_0d61748e.png",
       description: "Representation for individuals who have suffered harm due to negligence or wrongdoing.",
       details: [
         "Motor vehicle accidents",

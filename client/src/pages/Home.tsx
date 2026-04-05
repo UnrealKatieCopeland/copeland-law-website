@@ -24,7 +24,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/hero-justice.png')",
+            backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/hero-justice_9af7c8d1.png')",
             filter: "brightness(0.4)"
           }}
         />
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/images/accessibility-focus.png" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/accessibility-focus_bb3633a8.png" 
                 alt="Conceptual representation of accessibility advocacy" 
                 className="w-full rounded-sm shadow-lg"
               />

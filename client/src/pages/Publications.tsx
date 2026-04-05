@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import { FileText, ExternalLink, Clock, CheckCircle2, BookOpen, Landmark, Quote, Copy, Check } from 'lucide-react';
+import { FileText, ExternalLink, Clock, CheckCircle2, BookOpen, Landmark, Quote, Copy, Check, LayoutGrid } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const citations = [
@@ -361,6 +361,89 @@ export default function Publications() {
                 Request Speaking Engagement
               </Button>
             </Link>
+          </div>
+        </section>
+
+        {/* The Copeland Questions Infographic */}
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-3">
+            <LayoutGrid className="h-8 w-8 text-teal-600" />
+            <h2 className="text-3xl font-serif text-slate-900">The Copeland Questions™</h2>
+          </div>
+          <p className="text-slate-600 mb-8 max-w-2xl">
+            A structured judicial inquiry for ADA Title II compliance in court proceedings. Developed by Kathryn "Katie" Marie Copeland, J.D. Published by the ABA Commission on Disability Rights, April 2, 2026.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            {/* Infographic */}
+            <div>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_teal_v2_82a48d4a.png"
+                alt="Infographic: The Copeland Questions™ — A Structured Judicial Inquiry for ADA Title II Compliance. Four numbered questions with statutory citations, developed by Kathryn 'Katie' Marie Copeland, J.D. Published by the ABA Commission on Disability Rights, April 2, 2026. Full text below."
+                aria-describedby="copeland-questions-long-desc"
+                className="w-full max-w-sm mx-auto block rounded-lg shadow-lg"
+              />
+              <p className="text-xs text-slate-400 text-center mt-3">
+                Designed to WCAG 2.1 Level AA standards · High contrast · Screen reader accessible
+              </p>
+            </div>
+
+            {/* Accessible Long Description */}
+            <div
+              id="copeland-questions-long-desc"
+              className="bg-slate-50 border border-slate-200 rounded-lg p-6"
+              aria-label="Full text of The Copeland Questions infographic"
+            >
+              <h3 className="text-lg font-serif font-bold text-slate-900 mb-1">The Copeland Questions™</h3>
+              <p className="text-sm text-slate-500 italic mb-6">A Structured Judicial Inquiry for ADA Title II Compliance</p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">1</div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Qualified Person with a Disability?</h4>
+                    <p className="text-slate-700 text-sm mb-1">Is the individual a qualified person with a disability within the meaning of the ADA?</p>
+                    <p className="text-teal-700 text-xs font-mono">42 U.S.C. § 12102</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">2</div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Denied Meaningful Participation?</h4>
+                    <p className="text-slate-700 text-sm mb-1">Is the individual denied meaningful participation in a court service, program, or activity?</p>
+                    <p className="text-teal-700 text-xs font-mono">42 U.S.C. § 12132</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">3</div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Denial by Reason of Disability?</h4>
+                    <p className="text-slate-700 text-sm mb-1">Does the denial arise through the interaction between functional limitation and procedural structure?</p>
+                    <p className="text-teal-700 text-xs font-mono">28 C.F.R. § 35.130</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">4</div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Reasonable Modification Available?</h4>
+                    <p className="text-slate-700 text-sm mb-1">Would a reasonable modification enable access without fundamentally altering the proceeding or imposing undue burden?</p>
+                    <p className="text-teal-700 text-xs font-mono">28 C.F.R. § 35.130(b)(7)</p>
+                  </div>
+                </div>
+              </div>
+
+              <blockquote className="mt-6 border-l-4 border-teal-600 pl-4">
+                <p className="text-slate-800 font-semibold text-sm">"Equal justice under law cannot depend on neurological endurance."</p>
+              </blockquote>
+
+              <p className="text-xs text-slate-400 mt-6">
+                Published: ABA Commission on Disability Rights · April 2, 2026<br />
+                Developed by Kathryn "Katie" Marie Copeland, J.D. · CopelandLawTexas.com
+              </p>
+            </div>
           </div>
         </section>
 

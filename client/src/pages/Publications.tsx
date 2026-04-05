@@ -378,14 +378,14 @@ export default function Publications() {
             {/* Infographic */}
             <div>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_teal_v3_d99101b0.png"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_final_531c06a8.png"
                 alt="Infographic: The Copeland Questions™ — A Structured Judicial Inquiry for ADA Title II Compliance. Four numbered questions with statutory citations, developed by Kathryn 'Katie' Marie Copeland, J.D. Published by the ABA Commission on Disability Rights, April 2, 2026. Full text below."
                 aria-describedby="copeland-questions-long-desc"
                 className="w-full max-w-sm mx-auto block rounded-lg shadow-lg"
               />
               <div className="flex flex-col items-center gap-2 mt-3">
                 <a
-                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_teal_v3_d99101b0.png"
+                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_final_531c06a8.png"
                   download="CopelandQuestions-Infographic.png"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -395,7 +395,7 @@ export default function Publications() {
                   Download Infographic (PNG)
                 </a>
                 <a
-                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_square_d646975f.png"
+                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_square_final_23ebf89c.png"
                   download="CopelandQuestions-Square.png"
                   target="_blank"
                   rel="noopener noreferrer"

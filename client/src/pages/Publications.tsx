@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import { FileText, ExternalLink, Clock, CheckCircle2, BookOpen, Landmark, Quote, Copy, Check, LayoutGrid } from 'lucide-react';
+import { FileText, ExternalLink, Clock, CheckCircle2, BookOpen, Landmark, Quote, Copy, Check, LayoutGrid, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const citations = [
@@ -378,14 +378,34 @@ export default function Publications() {
             {/* Infographic */}
             <div>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_teal_v2_82a48d4a.png"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_teal_v3_d99101b0.png"
                 alt="Infographic: The Copeland Questions™ — A Structured Judicial Inquiry for ADA Title II Compliance. Four numbered questions with statutory citations, developed by Kathryn 'Katie' Marie Copeland, J.D. Published by the ABA Commission on Disability Rights, April 2, 2026. Full text below."
                 aria-describedby="copeland-questions-long-desc"
                 className="w-full max-w-sm mx-auto block rounded-lg shadow-lg"
               />
-              <p className="text-xs text-slate-400 text-center mt-3">
-                Designed to WCAG 2.1 Level AA standards · High contrast · Screen reader accessible
-              </p>
+              <div className="flex flex-col items-center gap-2 mt-3">
+                <a
+                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_teal_v3_d99101b0.png"
+                  download="CopelandQuestions-Infographic.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-teal-700 border border-teal-300 rounded px-4 py-2 hover:bg-teal-50 transition-colors"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Infographic (PNG)
+                </a>
+                <a
+                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/copeland_questions_square_d646975f.png"
+                  download="CopelandQuestions-Square.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 border border-slate-200 rounded px-4 py-2 hover:bg-slate-50 transition-colors"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Square Version (Instagram/LinkedIn)
+                </a>
+                <p className="text-xs text-slate-400 text-center">Designed to WCAG 2.1 Level AA standards · High contrast · Screen reader accessible</p>
+              </div>
             </div>
 
             {/* Accessible Long Description */}

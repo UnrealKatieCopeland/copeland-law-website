@@ -14,6 +14,7 @@ import Resources from "./pages/Resources";
 import Articles from "./pages/Articles";
 import ArticleNotEitherOr from "./pages/ArticleNotEitherOr";
 import ArticleAdministrativePathways from "./pages/ArticleAdministrativePathways";
+import ArticleCopelandQuestions from "./pages/ArticleCopelandQuestions";
 import Quiz from "./pages/Quiz";
 import DecisionTree from "./pages/DecisionTree";
 import ExamplesOfHarm from "./pages/ExamplesOfHarm";
@@ -34,6 +35,7 @@ function Router() {
       <Route path={"/articles"} component={Articles} />
       <Route path={"/article/not-eitheror-but-bothand"} component={ArticleNotEitherOr} />
       <Route path={"/article/administrative-pathways"} component={ArticleAdministrativePathways} />
+      <Route path={"/article/copeland-questions"} component={ArticleCopelandQuestions} />
       <Route path={"/tools"} component={ToolsHub} />
       <Route path={"/quiz"} component={Quiz} />
       <Route path={"/decision-tree"} component={DecisionTree} />

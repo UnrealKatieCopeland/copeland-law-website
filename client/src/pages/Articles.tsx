@@ -40,12 +40,13 @@ export default function Articles() {
             <CardContent className="p-0">
               <div className="grid md:grid-cols-5 gap-0">
                 {/* Visual Section */}
-                <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-primary/5 p-12 flex items-center justify-center">
+                <div className="md:col-span-2 bg-gradient-to-br from-primary/20 to-primary/10 p-12 flex items-center justify-center">
                   <div className="text-center">
                     <Scale className="h-24 w-24 text-primary mx-auto mb-6" />
                     <p className="text-sm text-accent-font text-primary font-semibold tracking-wide">
                       THE COPELAND QUESTIONS™
                     </p>
+                    <p className="text-xs text-muted-foreground mt-2">April 5, 2026</p>
                   </div>
                 </div>
 
@@ -53,38 +54,33 @@ export default function Articles() {
                 <div className="md:col-span-3 p-8 md:p-12">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded">
-                      Featured Framework
+                      Framework Introduction
                     </span>
-                    <span className="text-sm text-muted-foreground">2026</span>
+                    <span className="text-sm text-muted-foreground">New · April 5, 2026</span>
                   </div>
 
                   <h3 className="font-display text-3xl font-bold mb-4">
-                    Not Either/Or, But Both/And
+                    Introducing The Copeland Questions™
                   </h3>
 
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Dialectics, Disability, and Meaningful Access in Court
+                    A Structured Judicial Inquiry for ADA Title II Compliance in Court Proceedings
                   </p>
 
                   <p className="text-base text-foreground/70 mb-6 leading-relaxed">
-                    A belief-neutral, effect-based framework for analyzing courtroom accessibility 
-                    without credibility contests, diagnostic gatekeeping, or inquiries into judicial intent. 
-                    This essay proposes a disciplined approach grounded in existing disability law, 
-                    dialectical reasoning, and familiar courtroom practices like CART.
+                    This post formally names and introduces The Copeland Questions™ — a four-part 
+                    structured inquiry grounded entirely in existing law, designed to make ADA 
+                    Title II compliance analysis repeatable, reviewable, and on the record. 
+                    Every tradition worth keeping has a structure. This is the structure.
                   </p>
 
                   <div className="flex flex-wrap gap-4">
-                    <Link href="/article/not-eitheror-but-bothand">
+                    <Link href="/article/copeland-questions">
                       <Button>
                         <FileText className="mr-2 h-4 w-4" />
-                        Read Full Article
+                        Read Full Post
                       </Button>
                     </Link>
-                    <a href="/Not-EitherOr-But-BothAnd.pdf" download>
-                      <Button variant="outline">
-                        Download PDF
-                      </Button>
-                    </a>
                   </div>
                 </div>
               </div>

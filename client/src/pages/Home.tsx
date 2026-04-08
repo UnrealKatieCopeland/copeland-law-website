@@ -222,7 +222,7 @@ export default function Home() {
                 The Copeland Questions provide a structured approach to ensuring equal access 
                 to justice.
               </p>
-              <p className="text-sm text-foreground/60 mb-6">
+              <p className="text-sm mb-6" style={{color: '#595754'}}>
                 © 2026 Kathryn Copeland. All Rights Reserved.
               </p>
               <Link href="/resources">

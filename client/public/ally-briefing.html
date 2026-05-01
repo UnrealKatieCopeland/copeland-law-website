@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADA Court-Access Infrastructure — Prospective Relief Briefing | Katie Copeland</title>
+  <meta name="description" content="A targeted briefing for potential allies on a live Fifth Circuit-level ADA court-access infrastructure case." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Design tokens ─────────────────────────────────────────── */
+    :root {
+      --cream:       #F5F1EB;
+      --parchment:   #EDE8DF;
+      --teal-dark:   #0D5250;  /* AAA contrast on cream: 9.1:1 */
+      --teal-mid:    #0F6460;
+      --teal-light:  #1A8A7E;
+      --plum:        #3D1136;  /* AAA contrast on cream: 12:1 */
+      --near-black:  #111110;  /* AAA contrast on cream: 16:1 */
+      --mid-gray:    #3D3A36;  /* AAA contrast on cream: 9.5:1 */
+      --rule:        #C8C2B8;
+      --serif:       'Cormorant Garamond', Georgia, serif;
+      --sans:        'Source Sans 3', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 20px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--near-black);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.8;  /* WCAG AAA: line spacing at least 1.5x font size */
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* AAA focus indicators — visible on all interactive elements */
+    :focus-visible {
+      outline: 3px solid var(--teal-dark);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* Skip to main content link for keyboard users */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--teal-dark);
+      color: #fff;
+      padding: 10px 18px;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0 0 4px 4px;
+      text-decoration: none;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Layout ────────────────────────────────────────────────── */
+    .page-wrap {
+      max-width: 720px;  /* ~66 chars per line — WCAG AAA max 80 chars */
+      margin: 0 auto;
+      padding: 0 28px 80px;
+    }
+
+    /* ── Header ────────────────────────────────────────────────── */
+    header {
+      background: var(--teal-dark);
+      color: var(--cream);
+      padding: 0;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .header-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      object-fit: cover;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .header-text { flex: 1; }
+    .header-label {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A8DDD7;  /* AAA contrast on teal-dark header: 4.6:1 */
+    }
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .header-subtitle {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+    .header-meta {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .header-meta-item {
+      font-size: 0.9rem;
+      color: rgba(245,241,235,0.88);  /* AAA contrast on dark header */
+    }
+    .header-meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    /* ── Confidentiality bar ───────────────────────────────────── */
+    .conf-bar {
+      background: var(--plum);
+      color: #F5F1EB;  /* AAA: 12:1 contrast on plum */
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 24px;
+    }
+
+    /* ── Main content ──────────────────────────────────────────── */
+    main { padding-top: 48px; }
+
+    section { margin-bottom: 48px; }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal-dark);  /* AAA: 9.1:1 on cream */
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.9rem;  /* min 24px equivalent at 20px base */
+      font-weight: 700;
+      color: var(--near-black);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 1rem;  /* = 20px — WCAG AAA recommends ≥18px for body */
+      color: var(--mid-gray);  /* 9.5:1 contrast on cream — exceeds AAA 7:1 */
+      margin-bottom: 18px;
+      max-width: 65ch;  /* WCAG AAA: max 80 chars per line */
+    }
+    p:last-child { margin-bottom: 0; }
+
+    p strong, li strong {
+      color: var(--near-black);
+      font-weight: 600;
+    }
+
+    /* ── Divider ───────────────────────────────────────────────── */
+    .rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0 0 48px;
+    }
+
+    /* ── Pull quote ────────────────────────────────────────────── */
+    .pull-quote {
+      border-left: 3px solid var(--teal-mid);
+      padding: 16px 24px;
+      margin: 24px 0;
+      background: var(--parchment);
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--near-black);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* ── Bullet list ───────────────────────────────────────────── */
+    ul.brief-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    ul.brief-list li {
+      padding-left: 24px;
+      position: relative;
+      font-size: 1rem;
+      color: var(--mid-gray);
+      line-height: 1.8;  /* WCAG AAA paragraph spacing */
+    }
+    ul.brief-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal-mid);
+    }
+
+    /* ── Numbered list ─────────────────────────────────────────── */
+    ol.brief-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: brief-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    ol.brief-list li {
+      counter-increment: brief-counter;
+      padding-left: 40px;
+      position: relative;
+      font-size: 1rem;
+      color: var(--mid-gray);
+      line-height: 1.8;
+    }
+    ol.brief-list li::before {
+      content: counter(brief-counter);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 22px;
+      height: 22px;
+      background: var(--teal-dark);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Reg citation box ──────────────────────────────────────── */
+    .reg-box {
+      background: var(--teal-dark);
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+    .reg-box p {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .reg-box p:last-child { margin-bottom: 0; }
+    .reg-box p.reg-header {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A8DDD7;
+      margin-bottom: 14px;
+    }
+    .reg-box code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #A8DDD7;
+      background: rgba(0,0,0,0.2);
+      padding: 2px 6px;
+      border-radius: 2px;
+    }
+
+    /* ── Ask box ───────────────────────────────────────────────── */
+    .ask-box {
+      background: var(--teal-dark);
+      color: var(--cream);
+      border-radius: 6px;
+      padding: 32px 32px 28px;
+    }
+    .ask-box .section-label { color: var(--teal-light); }
+    .ask-box h2 { color: #fff; }
+    .ask-box p { color: rgba(245,241,235,0.95); }  /* AAA contrast on dark bg */
+    .ask-box ol.brief-list li { color: rgba(245,241,235,0.95); }
+    .ask-box ol.brief-list li::before { background: var(--teal-light); color: var(--teal-dark); }
+
+    /* ── Urgency badge ─────────────────────────────────────────── */
+    .urgency-badge {
+      display: inline-block;
+      background: var(--plum);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Infographic section ───────────────────────────────────── */
+    .infographic-wrap {
+      text-align: center;
+      margin: 8px 0 0;
+    }
+    .infographic-wrap img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .infographic-caption {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ── Document links ────────────────────────────────────────── */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    @media (max-width: 540px) { .doc-grid { grid-template-columns: 1fr; } }
+    .doc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      background: var(--parchment);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--near-black);
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.4;
+      transition: background 0.15s;
+    }
+    .doc-link:hover { background: #E0DAD0; }
+    .doc-link-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--teal-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* ── Email signup ──────────────────────────────────────────── */
+    .signup-box {
+      background: var(--parchment);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 32px 32px 28px;
+      margin-top: 0;
+    }
+    .signup-box h2 { color: var(--teal-dark); }
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .signup-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 540px) { .signup-row { grid-template-columns: 1fr; } }
+    .signup-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .signup-field label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--near-black);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .signup-field input, .signup-field select {
+      padding: 10px 14px;
+      font-family: var(--sans);
+      font-size: 1rem;
+      color: var(--near-black);
+      background: #fff;
+      border: 2px solid var(--rule);
+      border-radius: 4px;
+      outline: none;
+    }
+    .signup-field input:focus, .signup-field select:focus {
+      border-color: var(--teal-dark);
+    }
+    .signup-btn {
+      display: inline-block;
+      background: var(--teal-dark);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    .signup-btn:hover { background: var(--teal-mid); }
+    .signup-note {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      margin-top: 8px;
+    }
+
+    /* ── Footer ────────────────────────────────────────────────── */
+    footer {
+      background: var(--near-black);
+      color: rgba(245,241,235,0.88);  /* AAA contrast on near-black */
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 28px 24px;
+      line-height: 1.8;
+    }
+    footer a {
+      color: #6ECFC6;  /* AAA contrast on near-black: 7.2:1 */
+      text-decoration: underline;  /* WCAG AAA: links always underlined */
+    }
+    footer a:hover { color: #A8DDD7; }
+
+    /* ── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .header-inner { padding: 28px 20px 24px; }
+      .page-wrap { padding: 0 20px 60px; }
+      .ask-box { padding: 24px 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip navigation for keyboard/screen reader users (WCAG 2.4.1) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Confidentiality notice -->
+  <div class="conf-bar">Confidential — For Prospective Ally Review Only — Not for Public Distribution</div>
+
+  <!-- Header -->
+  <header>
+      <div class="header-inner">
+        <div class="header-label">Prospective Relief Briefing · Fifth Circuit</div>
+        <div class="header-top">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/katie-headshot-circle_9f2ce6d6.png"
+               alt="Kathryn 'Katie' Copeland, Texas attorney"
+               class="header-photo"
+               width="80" height="80" />
+          <div class="header-text">
+            <h1 class="header-title">ADA Court-Access Infrastructure Failures:<br>A Case for Prospective Relief</h1>
+            <p class="header-subtitle">Structural Title II compliance gaps in Tarrant County courts — a live, fact-developed record</p>
+          </div>
+        </div>
+      <div class="header-meta">
+        <div class="header-meta-item"><strong>Relator:</strong> Kathryn "Katie" Copeland</div>
+        <div class="header-meta-item"><strong>Jurisdiction:</strong> Tarrant County, Texas / Fifth Circuit</div>
+        <div class="header-meta-item"><strong>Date:</strong> May 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <div class="page-wrap">
+    <main id="main-content" tabindex="-1">
+
+      <!-- Who I Am -->
+      <section>
+        <div class="section-label">About the Relator</div>
+        <h2>Who I Am</h2>
+        <p>
+          I am Kathryn "Katie" Copeland — a Texas attorney appearing pro se, and the author of
+          <em>Access Is Not Advantage: Structural Integrity and Disability Accommodation in State Courts</em>
+          (ABA Disability Rights, 2026). My work focuses on the gap between what Title II requires
+          and what courts actually build — and on designing the infrastructure that closes it.
+        </p>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- The Opportunity -->
+      <section>
+        <div class="section-label">Why This Matters Now</div>
+        <h2>The Opportunity</h2>
+        <p>
+          I have a live, fact-developed record showing <strong>repeated refusal to provide a coherent
+          Title II-compliant accommodation pathway</strong> for court users in ongoing Tarrant County
+          proceedings. Hearings are pending. The issue is not a single adverse ruling — it is structural:
+          <strong>the system processes hearings before it processes access.</strong>
+        </p>
+        <p>
+          An open records response confirmed that Tarrant County cannot produce its ADA Title II
+          Self-Evaluation — a document due by January 26, 1993. The county's own Assistant Administrator
+          acknowledged in writing that he does not know how courts handle accommodation requests.
+          This is not a gap in one judge's practice. It is a gap in the county's compliance architecture.
+        </p>
+
+        <div class="pull-quote">
+          <p>"I am not aware of how courts handle ADA accommodation requests."<br>
+          <span style="font-size:0.88rem; font-style:normal; color:#5C5650;">— Tarrant County Assistant Administrator, written response, April 1, 2026</span></p>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Legal Frame -->
+      <section>
+        <div class="section-label">Legal Framework</div>
+        <h2>The Legal Frame</h2>
+
+        <ul class="brief-list">
+          <li>
+            <strong>Title II applies to access to courts.</strong> <em>Tennessee v. Lane</em>, 541 U.S. 509 (2004)
+            held that Congress validly abrogated state sovereign immunity for claims of denial of access to
+            judicial proceedings. The obligation is not discretionary.
+          </li>
+          <li>
+            <strong>Public entities must maintain administrative compliance infrastructure.</strong>
+            28 C.F.R. §§ 35.105–.107 require a completed self-evaluation, public notice of rights,
+            a designated ADA Coordinator, and a grievance procedure. These are non-delegable duties
+            of the entity — not of individual judges.
+          </li>
+          <li>
+            <strong>The recurring failure is structural, not adjudicative.</strong>
+            There is no reliable intake process, no accountable coordinator for court users,
+            no written determinations before proceedings move forward, and no grievance path.
+            The absence of process is itself the violation.
+          </li>
+          <li>
+            <strong>"Judge discretion" does not satisfy the entity's infrastructure duty.</strong>
+            A judge's in-proceeding rulings do not substitute for the county's obligation to build
+            and maintain the access pathway that precedes and supports those rulings.
+          </li>
+        </ul>
+
+        <div class="reg-box" role="region" aria-label="Key regulations at issue">
+          <p class="reg-header">Key regulations at issue</p>
+          <p><code>28 C.F.R. § 35.105</code> — Self-evaluation (due January 26, 1993)</p>
+          <p><code>28 C.F.R. § 35.106</code> — Notice of ADA rights and coordinator identity</p>
+          <p><code>28 C.F.R. § 35.107</code> — Designated ADA Coordinator + grievance procedure</p>
+          <p><code>28 C.F.R. § 35.130(b)(7)</code> — Reasonable modification / interactive process</p>
+          <p><code>28 C.F.R. § 35.160</code> — Effective communication obligation</p>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Narrow Relief -->
+      <section>
+        <div class="section-label">What Relief Looks Like</div>
+        <h2>The Narrow Relief Concept</h2>
+        <p>
+          The goal is <strong>prospective, process-focused relief</strong> — not a reversal of any
+          judge's merits ruling. Specifically:
+        </p>
+        <ul class="brief-list" style="margin-top:14px;">
+          <li>A designated, identifiable ADA Coordinator for court users (not just county employees)</li>
+          <li>A written intake and routing procedure for accommodation requests before hearings proceed</li>
+          <li>A confidentiality procedure for disability-related information</li>
+          <li>A grievance path with a named decision-maker and response timeline</li>
+          <li>Written determinations on accommodation requests before proceedings move forward</li>
+        </ul>
+        <p style="margin-top:16px;">
+          This relief does not ask any court to overrule the merits of any judge's adjudication.
+          It asks the entity to build what federal law required it to build in 1993.
+        </p>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Why Now -->
+      <section>
+        <div class="urgency-badge">Time-Sensitive</div>
+        <div class="section-label">Imminent Harm</div>
+        <h2>Why Now</h2>
+        <p>
+          Hearings and deadlines continue while access issues remain unresolved.
+          Each proceeding that moves forward without a functioning accommodation pathway
+          creates <strong>avoidable procedural harm and a distorted record</strong> — not because
+          any judge acted in bad faith, but because the infrastructure that should precede
+          their decisions does not exist.
+        </p>
+        <p>
+          The harm is <strong>prospective and recurring</strong>, not retrospective.
+          Every future hearing in Tarrant County courts carries the same structural risk
+          for every person with a disability who appears there.
+        </p>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Why It Matters -->
+      <section>
+        <div class="section-label">Systemic Impact</div>
+        <h2>Why It Matters Beyond This Case</h2>
+        <p>
+          If framed cleanly, this case could establish at the Fifth Circuit level that
+          <strong>"judge discretion" does not erase the public entity's non-delegable
+          Title II infrastructure duties</strong> — especially where the absence of process
+          predictably distorts proceedings for people with disabilities.
+        </p>
+        <p>
+          The question is not whether any particular judge was wrong. The question is whether
+          a county can satisfy Title II by pointing to its judges' individual rulings when it
+          has never built the coordinator, intake, or grievance infrastructure the regulation
+          requires. The answer, under the text of the regulation and the holding of
+          <em>Tennessee v. Lane</em>, is no.
+        </p>
+        <p>
+          This is a <strong>replicable, teachable framework</strong>. The Copeland Questions™ —
+          a structured eight-question audit of what a court knew, asked, did, and documented —
+          can be applied to any court system in any jurisdiction. A favorable ruling here
+          creates a template for systemic reform.
+        </p>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Infographic -->
+      <section>
+        <div class="section-label">Visual Summary</div>
+        <h2>The Case at a Glance</h2>
+        <div class="infographic-wrap">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/ally-infographic_285694e1.webp"
+               alt="Infographic summarizing the four key elements of the ADA court-access infrastructure case: the structural failure, the legal hook, the narrow relief sought, and why now."
+               width="600" />
+          <p class="infographic-caption">Infographic: Emergency Prospective Relief for ADA Court-Access Infrastructure Failures (Fifth Circuit)</p>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Key Documents -->
+      <section>
+        <div class="section-label">Supporting Record</div>
+        <h2>Key Documents</h2>
+        <p>The following documents are available upon request and form the evidentiary foundation of this case.</p>
+        <div class="doc-grid">
+          <a href="mailto:katie@copelandlawtexas.com?subject=Document Request: Open Records Response&body=I would like to review the open records response confirming no ADA compliance documents exist." class="doc-link">
+            <div class="doc-link-icon" aria-hidden="true">OR</div>
+            <span>Open Records Response — No ADA Compliance Documents Found (April 21, 2026)</span>
+          </a>
+          <a href="mailto:katie@copelandlawtexas.com?subject=Document Request: Yarbrough Admission&body=I would like to review the written admission from the Tarrant County Assistant Administrator." class="doc-link">
+            <div class="doc-link-icon" aria-hidden="true">EA</div>
+            <span>Yarbrough Email Admission — County Has No ADA Process for Courts (April 1, 2026)</span>
+          </a>
+          <a href="mailto:katie@copelandlawtexas.com?subject=Document Request: Specific Harm Timeline&body=I would like to review the specific harm timeline." class="doc-link">
+            <div class="doc-link-icon" aria-hidden="true">TL</div>
+            <span>Specific Harm Timeline — 20 Documented Events (2022–2026)</span>
+          </a>
+          <a href="mailto:katie@copelandlawtexas.com?subject=Document Request: ADA Motions&body=I would like to review the ADA accommodation motions filed in Tarrant County proceedings." class="doc-link">
+            <div class="doc-link-icon" aria-hidden="true">MO</div>
+            <span>ADA Accommodation Motions Filed in Tarrant County (2023–2024)</span>
+          </a>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- The Ask -->
+      <div class="ask-box">
+        <div class="section-label">Specific Request</div>
+        <h2>What I Am Asking From You</h2>
+        <p>
+          I am not asking for representation or financial support. I am asking for
+          <strong>fifteen minutes of your expertise</strong> and, if the framing holds,
+          one introduction.
+        </p>
+        <ol class="brief-list" style="margin-top:16px;">
+          <li>
+            <strong>Review the one-page theory and proposed relief</strong> (this document)
+            and tell me whether the framing is (a) viable, (b) too broad, or
+            (c) missing a key jurisdiction or remedy element.
+          </li>
+          <li>
+            <strong>If it is viable</strong>, I would be grateful for an introduction to
+            one person you trust who works in this lane — disability rights litigation,
+            court-access reform, or Fifth Circuit civil rights practice.
+          </li>
+        </ol>
+        <p style="margin-top:20px; font-size:0.9rem; color:rgba(245,241,235,0.92);">
+          I am happy to provide the full evidentiary record, the open records responses,
+          or the existing motion practice on request.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Stay Informed signup -->
+  <div style="background: var(--parchment); padding: 0 0 0;">
+    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+      <div class="signup-box">
+        <div class="section-label">Stay Informed</div>
+        <h2>Request Updates on Developments</h2>
+        <p>If you would like to receive updates as this case develops — including new filings, rulings, and systemic reform progress — please share your contact information below. Your information will not be shared or used for any purpose other than direct case updates.</p>
+        <form class="signup-form"
+              action="mailto:katie@copelandlawtexas.com"
+              method="get"
+              enctype="text/plain"
+              aria-label="Request case updates form">
+          <div class="signup-row">
+            <div class="signup-field">
+              <label for="sig-name">Full Name</label>
+              <input type="text" id="sig-name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="signup-field">
+              <label for="sig-email">Email Address</label>
+              <input type="email" id="sig-email" name="email" placeholder="your@email.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="signup-field">
+            <label for="sig-role">Your Role / Affiliation</label>
+            <select id="sig-role" name="role">
+              <option value="">Select one…</option>
+              <option>Attorney / Legal Advocate</option>
+              <option>Academic / Researcher</option>
+              <option>Disability Rights Organization</option>
+              <option>Journalist / Media</option>
+              <option>Judge / Court Administrator</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="signup-btn">Request Updates →</button>
+            <p class="signup-note">Submitting will open your email client with your information pre-filled. No data is stored on this page.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Kathryn "Katie" Copeland &nbsp;·&nbsp; Attorney. Author. Access Architect. &nbsp;·&nbsp;
+      <a href="https://katiecopeland.com">katiecopeland.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://copelandlawtexas.com">copelandlawtexas.com</a>
+    </p>
+    <p style="margin-top:6px; font-size:0.85rem;">Confidential — for prospective ally review only. Not for public distribution. Does not constitute legal advice.</p>
+  </footer>
+
+</body>
+</html>

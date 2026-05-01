@@ -36,7 +36,7 @@ export default function Header() {
               <img 
                 src="/images/CopelandLawLetterheadLogo-transparent.png" 
                 alt="Copeland Law" 
-                className="h-12 transition-opacity group-hover:opacity-80"
+                className="h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
               />
             </div>
             </Link>

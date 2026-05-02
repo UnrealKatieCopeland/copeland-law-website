@@ -358,6 +358,33 @@
       font-style: italic;
     }
 
+    /* ── Photo-infographic gallery ──────────────────────────────── */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 16px 0 0;
+    }
+    .photo-gallery-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .photo-gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.14);
+      display: block;
+    }
+    .photo-gallery-item .gallery-caption {
+      font-size: 0.80rem;
+      color: var(--mid-gray);
+      font-style: italic;
+      text-align: center;
+      line-height: 1.4;
+    }
+
     /* ── Document links ────────────────────────────────────────── */
     .doc-grid {
       display: grid;
@@ -510,7 +537,7 @@
           </div>
         </div>
       <div class="header-meta">
-        <div class="header-meta-item"><strong>Relator:</strong> Kathryn "Katie" Copeland</div>
+        <div class="header-meta-item">Kathryn &ldquo;Katie&rdquo; Copeland, Attorney at Law, <em>pro se</em></div>
         <div class="header-meta-item"><strong>Jurisdiction:</strong> Tarrant County, Texas / Fifth Circuit</div>
         <div class="header-meta-item"><strong>Date:</strong> May 2026</div>
       </div>
@@ -523,7 +550,7 @@
 
       <!-- Who I Am -->
       <section>
-        <div class="section-label">About the Relator</div>
+        <div class="section-label">About the Author</div>
         <h2>Who I Am</h2>
         <p>
           I am Kathryn "Katie" Copeland — a Texas attorney appearing pro se, and the author of
@@ -677,12 +704,52 @@
       <section>
         <div class="section-label">Visual Summary</div>
         <h2>The Case at a Glance</h2>
-        <div class="infographic-wrap">
+
+        <!-- Emergency Relief Brief Card -->
+        <div class="infographic-wrap" style="margin-bottom:28px;">
           <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/emergency-relief-brief-card_23cdf86e.webp"
-               alt="Infographic: Emergency Prospective Relief for ADA Court-Access Infrastructure Failures (Fifth Circuit). Four sections: Section A — The Structural Failure: the system processes hearings before it processes access; no coordinator, no written intake, no accountable owner, no timely written determinations. Section B — The Legal Hook: Title II requires meaningful access to courts, not just physical entry (Tennessee v. Lane); 28 C.F.R. §§ 35.105–.107; judge discretion does not erase a public entity's non-delegable Title II infrastructure duties. Section C — The Narrow Relief Sought: designated coordinator plus written intake and routing; confidentiality procedure plus grievance path; timely written determinations before proceedings move forward; no merits review, process-only prospective relief. Section D — Why Now — Imminent Harm: hearings and deadlines continue while access issues remain unresolved; each proceeding without access creates an avoidable, distorted record; the harm is prospective and recurring, not retrospective. Footer: Access Cannot Wait. The Harm Is Prospective and Recurring."
+               alt="Infographic: Emergency Prospective Relief for ADA Court-Access Infrastructure Failures (Fifth Circuit). Sections A through D covering the structural failure, the legal hook, the narrow relief sought, and why the harm is imminent and recurring. Footer: Access Cannot Wait. The Harm Is Prospective and Recurring."
                width="520" style="max-width:100%;" />
-          <p class="infographic-caption">Infographic: Emergency Prospective Relief for ADA Court-Access Infrastructure Failures (Fifth Circuit) &nbsp;&middot;&nbsp; <a href="https://traumachaplaincy.my.canva.site/dahgkmh1ivu" target="_blank" rel="noopener noreferrer" style="color:var(--teal-mid);">View full Canva version</a></p>
+          <p class="infographic-caption">Emergency Prospective Relief &mdash; Brief Card &nbsp;&middot;&nbsp; <a href="https://traumachaplaincy.my.canva.site/dahgkmh1ivu" target="_blank" rel="noopener noreferrer" style="color:var(--teal-mid);">View full Canva version</a></p>
         </div>
+
+        <!-- Photo-infographic gallery -->
+        <div class="photo-gallery">
+
+          <div class="photo-gallery-item">
+            <a href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-the-gap_841fe08e.png" target="_blank" rel="noopener noreferrer">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-the-gap_841fe08e.png"
+                   alt="The Gap Between Federal Law and Tarrant County Courts. Timeline from 1990 to 2026 showing federal ADA requirements on the left and Tarrant County's non-compliance on the right. 1992: ADA Coordinator required — no coordinator designated. 1993: Self-Evaluation due — self-evaluation never completed. 2004: Tennessee v. Lane confirms court access as fundamental right. 2023: Accommodation requests filed — no interactive process initiated. 2024: DOJ complaint filed — no remediation. 2026: Open records confirms no compliance documents exist — 33-year gap confirmed in writing. Footer: This is not a new problem. It is an old one that was never solved." />
+            </a>
+            <p class="gallery-caption">The Gap Between Federal Law and Tarrant County Courts (1990&ndash;2026)</p>
+          </div>
+
+          <div class="photo-gallery-item">
+            <a href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-federal-law-required_ea3bb2e7.png" target="_blank" rel="noopener noreferrer">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-federal-law-required_ea3bb2e7.png"
+                   alt="What Federal Law Required of Every County Court System by 1993 — And What Tarrant County Cannot Produce in 2026. Three requirements: 28 C.F.R. § 35.107(a), deadline January 26 1992, a designated ADA Coordinator — Tarrant County response: Unable to locate any responsive information. 28 C.F.R. § 35.107(b), deadline January 26 1992, a written grievance procedure — Tarrant County response: Unable to locate any responsive information. 28 C.F.R. § 35.105, deadline January 26 1993, a completed ADA Title II Self-Evaluation — Tarrant County response: Unable to locate any responsive information. Source: Tarrant County Open Records Response CDA-2026-897, April 21 2026. Footer: 33 years. Still waiting." />
+            </a>
+            <p class="gallery-caption">What Federal Law Required by 1993 &mdash; and What Tarrant County Cannot Produce in 2026</p>
+          </div>
+
+          <div class="photo-gallery-item">
+            <a href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-five-questions_109d50c9.png" target="_blank" rel="noopener noreferrer">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-five-questions_109d50c9.png"
+                   alt="Five Questions That Should Have Been Asked. The ADA Interactive Process — What It Requires, What It Looks Like When It's Missing. 1. Did the court know a disability existed? 2. Did the court ask what the person needed? 3. Did the court consult an independent ADA Coordinator? 4. Did the court conduct an individualized assessment? 5. Did the court issue a written determination? If the answer to any of these is no, the interactive process was not completed. If the interactive process was not completed, Title II of the ADA was not satisfied. Citation: 28 C.F.R. § 35.130(b)(7). The Copeland Questions™. Access is not advantage. It is the law." />
+            </a>
+            <p class="gallery-caption">Five Questions That Should Have Been Asked &mdash; The Copeland Questions&trade;</p>
+          </div>
+
+          <div class="photo-gallery-item">
+            <a href="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-access-is-not-advantage_cdc938ba.webp" target="_blank" rel="noopener noreferrer">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-access-is-not-advantage_cdc938ba.webp"
+                   alt="Access Is Not Advantage. It is the minimum the law requires. It is what justice looks like before it begins. When a disabled person asks for accommodations in court, they are not asking for an edge. They are asking for the floor. The floor that federal law has required since 1992. The floor that thirty-three years of inaction has left unbuilt. The Copeland Questions exist because someone has to ask them. Footer: katiecopeland.com. Access Is Not Advantage: Structural Integrity and Disability Accommodation in State Courts, ABA 2026." />
+            </a>
+            <p class="gallery-caption">&ldquo;Access Is Not Advantage&rdquo; &mdash; The Copeland Questions&trade; (ABA, 2026)</p>
+          </div>
+
+        </div>
+        <p class="infographic-caption" style="margin-top:14px;">Click any image to view full size &middot; All graphics &copy; Kathryn Copeland, 2026</p>
       </section>
 
       <hr class="rule" />

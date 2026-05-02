@@ -468,6 +468,76 @@ export default function Publications() {
         </section>
 
         {/* Cite This Work */}
+        {/* Visual Advocacy Cards */}
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-3">
+            <LayoutGrid className="h-8 w-8 text-teal-600" />
+            <h2 className="text-3xl font-serif text-slate-900">Visual Advocacy</h2>
+          </div>
+          <p className="text-slate-600 mb-8 max-w-2xl">
+            These graphics translate the legal record into plain language. Share them. Cite them. Use them to start the conversation.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              {
+                src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-access-is-not-advantage_cdc938ba.webp',
+                alt: 'Access Is Not Advantage — a photo-infographic with Kathryn Copeland. Text: Access Is Not Advantage. It is the minimum the law requires. It is what justice looks like before it begins. When a disabled person asks for accommodations in court, they are not asking for an edge. They are asking for the floor. The Copeland Questions exist because someone has to ask them.',
+                caption: '\u201cAccess Is Not Advantage\u201d',
+                sub: 'The Copeland Questions\u2122 (ABA, 2026)',
+              },
+              {
+                src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-five-questions_109d50c9.png',
+                alt: 'Five Questions That Should Have Been Asked. The ADA Interactive Process — What It Requires, What It Looks Like When It\u2019s Missing. Five numbered questions about whether the court knew of a disability, asked what was needed, consulted an ADA Coordinator, conducted an individualized assessment, and issued a written determination. If any answer is no, Title II was not satisfied.',
+                caption: 'Five Questions That Should Have Been Asked',
+                sub: 'The ADA Interactive Process \u2014 The Copeland Questions\u2122',
+              },
+              {
+                src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-the-gap_841fe08e.png',
+                alt: 'The Gap Between Federal Law and Tarrant County Courts. A timeline from 1990 to 2026 showing what federal law required and what Tarrant County never did. Footer: This is not a new problem. It is an old one that was never solved.',
+                caption: 'The Gap Between Federal Law and Tarrant County Courts',
+                sub: '1990\u20132026 \u2014 This is not a new problem.',
+              },
+              {
+                src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663217842804/fxoDUGK7fWNuzCp7b7Ds9x/infographic-federal-law-required_ea3bb2e7.png',
+                alt: 'What Federal Law Required of Every County Court System by 1993 \u2014 And What Tarrant County Cannot Produce in 2026. Three federal requirements from 28 C.F.R. \u00a7\u00a7 35.105 and 35.107, all due by 1993. Tarrant County response to each: Unable to locate any responsive information. Source: Open Records Response CDA-2026-897. Footer: 33 years. Still waiting.',
+                caption: 'What Federal Law Required by 1993',
+                sub: 'And What Tarrant County Cannot Produce in 2026',
+              },
+            ].map((card, i) => (
+              <div key={i} className="flex flex-col gap-3">
+                <a
+                  href={card.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+                >
+                  <img
+                    src={card.src}
+                    alt={card.alt}
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
+                </a>
+                <div>
+                  <p className="font-semibold text-slate-800 text-sm">{card.caption}</p>
+                  <p className="text-slate-500 text-xs italic">{card.sub}</p>
+                </div>
+                <a
+                  href={card.src}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-teal-700 border border-teal-300 rounded px-3 py-1.5 w-fit hover:bg-teal-50 transition-colors"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Download
+                </a>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-slate-400 mt-6">All graphics \u00a9 Kathryn Copeland, 2026 \u00b7 Designed to WCAG 2.1 Level AA standards</p>
+        </section>
+
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-3">
             <Quote className="h-8 w-8 text-teal-600" />
